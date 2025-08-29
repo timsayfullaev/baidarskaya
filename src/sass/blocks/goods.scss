@@ -8,6 +8,12 @@
     column-gap: 18px;
   }
   &__card {
+    border-radius: 16px;
+    padding: 24px;
+    width: 692px;
+    min-height: 460px;
+    position: relative;
+    overflow: hidden;
     &_products {
       &:hover {
         .goods__background_products {
@@ -24,12 +30,6 @@
         }
       }
     }
-    border-radius: 16px;
-    padding: 24px;
-    width: 692px;
-    min-height: 460px;
-    position: relative;
-    overflow: hidden;
   }
   &__background {
     position: absolute;
