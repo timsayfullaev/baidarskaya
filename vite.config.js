@@ -43,4 +43,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: "/baidarskaya/dist/", // имя твоего репозитория
 });
