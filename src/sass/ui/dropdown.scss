@@ -1,0 +1,36 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.dropdown {
+  &_light {
+    .dropdown__button {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+    color: $black-700;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+      text-decoration: none;
+    }
+  }
+  &__icon {
+    font-size: 16px;
+  }
+  &__content {
+    display: none;
+  }
+}

@@ -1,0 +1,150 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 16px 0;
+  &_light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    .header__link {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    .dropdown {
+      &__button {
+        color: $white;
+      }
+    }
+    .header__phone {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    .header__call {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    .header__logo {
+      &-image {
+        filter: brightness(0) invert(1);
+      }
+    }
+    .header__nav-link {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    .button {
+      &_outline {
+        border-color: $white;
+        color: $white;
+        &:hover {
+          border-color: $blue-800;
+        }
+        &:active {
+          border-color: #0065cc;
+        }
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__links {
+    display: flex;
+    column-gap: 24px;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    color: $black-700;
+    text-decoration: none;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+      text-decoration: underline;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  &__phone {
+    font-weight: 600;
+    font-size: 18px;
+    color: $black-700;
+    text-decoration: none;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+      text-decoration: underline;
+    }
+  }
+  &__call {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: underline;
+    color: $black-700;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+      text-decoration: none;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+  }
+  &__logo {
+    max-width: 298px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    &-link {
+      font-weight: 500;
+      font-size: 16px;
+      color: $black-700;
+      text-decoration: none;
+      transition: all 0.25s;
+      &:hover {
+        color: $blue-800;
+        text-decoration: underline;
+      }
+      &_icon {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+}

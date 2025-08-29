@@ -1,0 +1,10 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.questions {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,8 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.title {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 120%;
+  color: $black-700;
+}

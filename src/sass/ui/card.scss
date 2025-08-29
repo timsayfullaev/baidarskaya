@@ -1,0 +1,112 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.card {
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 312px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+  }
+  &::before {
+    @include overlay-blue;
+    opacity: 1;
+  }
+  &::after {
+    @include overlay-hover;
+    opacity: 0;
+  }
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+    .card__content {
+      transform: translateY(0);
+    }
+    .card__hidden {
+      opacity: 1;
+      visibility: visible;
+      max-height: 312px;
+    }
+  }
+  &_dim {
+    &::before {
+      @include overlay;
+    }
+  }
+  &_support {
+    max-width: 338px;
+    height: 406px;
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    z-index: 1;
+  }
+  &__label {
+    border-radius: 13px;
+    padding: 4px 8px;
+    background: $blue-800;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__period {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: $white;
+  }
+  &__content {
+    transform: translateY(16px);
+    transition: all 0.3s ease-out;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    color: $white;
+    margin-top: 4px;
+  }
+  &__hidden {
+    margin-top: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    max-height: 0;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $white;
+    max-width: 363px;
+  }
+  &__button {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,126 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+  padding: 40px 0;
+  background: linear-gradient(134deg, #007fff 0%, #2e89e5 50.26%, #153b61 100%);
+  margin-top: 120px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    max-width: 298px;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+  &__phone {
+    font-weight: 500;
+    font-size: 28px;
+    color: $white;
+    text-decoration: none;
+    margin-top: 4px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &__company {
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+  }
+  &__email {
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+    margin-top: 12px;
+    &-link {
+      font-weight: 400;
+      font-size: 14px;
+      color: $white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 32px;
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.08);
+      color: $white;
+      transition: all 0.25s;
+      &:hover {
+        background: $white;
+        color: $blue-800;
+      }
+      &:active {
+        background: #e5e5e5;
+      }
+    }
+    &-icon {
+      font-size: 24px;
+    }
+  }
+  &__navigation {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  &__nav {
+    display: flex;
+    column-gap: 32px;
+    &-link {
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &__meta {
+    display: flex;
+    column-gap: 12px;
+    &-link {
+      font-weight: 400;
+      font-size: 12px;
+      text-decoration: underline;
+      color: $white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__copyright {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: $white;
+  }
+}

@@ -1,0 +1,66 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.contact-card {
+  border: 1px solid $blue-300;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 364px;
+  background: $white;
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: $blue-800;
+  }
+  &__contact {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+    color: $blue-800;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 24px;
+  }
+  &__block {
+    display: flex;
+    column-gap: 12px;
+    &:has(a:hover) .contact-card__icon {
+      color: $blue-800;
+    }
+  }
+  &__icon {
+    font-size: 24px;
+    color: $black-700;
+    line-height: 16px;
+    transition: all 0.3s;
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    color: $black-700;
+    text-decoration: none;
+    padding-top: 3px;
+    font-style: normal;
+    &_link {
+      transition: all 0.3s;
+      &:hover {
+        color: $blue-800;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 100%;
+  &__item {
+    border: 1px solid $blue-400;
+    border-radius: 24px;
+    &_active {
+      padding-bottom: 16px;
+      .accordion__header {
+        padding-bottom: 4px;
+      }
+      .accordion__icon {
+        transform: rotate(-180deg);
+      }
+      .accordion__content {
+        opacity: 1;
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 14px 12px 14px 16px;
+    transition: all 0.3s;
+    &:hover {
+      .accordion__title,
+      .accordion__icon {
+        color: $blue-800;
+      }
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: $black-700;
+    transition: all 0.3s;
+  }
+  &__icon {
+    color: $black-700;
+    font-size: 24px;
+    line-height: 16px;
+    transition: all 0.3s;
+  }
+  &__content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $black-500;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    padding: 0 12px 0 16px;
+    transition: all 0.3s;
+  }
+}

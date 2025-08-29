@@ -1,0 +1,21 @@
+{
+  "name": "baidarskaya",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "postcss-pxtorem": "^6.1.0",
+    "sass": "^1.89.2",
+    "vite": "^7.0.6",
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1",
+    "swiper": "^11.2.10"
+  }
+}
