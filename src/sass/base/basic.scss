@@ -37,6 +37,11 @@ html {
   font-family: $font-family;
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;

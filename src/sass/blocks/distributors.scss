@@ -1,0 +1,10 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.distributors {
+  &__wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}

@@ -1,0 +1,8 @@
+.page {
+  margin-top: 40px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 338px auto;
+    column-gap: 32px;
+  }
+}

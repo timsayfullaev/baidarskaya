@@ -63,19 +63,6 @@
     align-items: start;
     z-index: 1;
   }
-  &__label {
-    border-radius: 13px;
-    padding: 4px 8px;
-    background: $blue-800;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: $white;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
   &__period {
     font-weight: 400;
     font-size: 12px;

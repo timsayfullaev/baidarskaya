@@ -1,15 +1,15 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.contacts {
-  &__wrapper {
-    margin-top: 40px;
-    position: relative;
-  }
-  &__map {
+.map {
+  position: relative;
+  &__frame {
     border: 1px solid $blue-400;
     border-radius: 20px;
     height: 620px;
     overflow: hidden;
+    &_schedule {
+      height: 500px;
+    }
   }
   &__locations {
     display: flex;
@@ -18,5 +18,8 @@
     position: absolute;
     top: 48px;
     right: 48px;
+  }
+  &_contacts {
+    margin-top: 40px;
   }
 }

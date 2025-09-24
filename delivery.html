@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <nav class="header__links">
+            <a href="#" class="header__link">О воде</a>
+            <a href="#" class="header__link">О производстве</a>
+            <a href="#" class="header__link">Вопрос-ответ</a>
+            <a href="#" class="header__link">Контакты</a>
+          </nav>
+          <div class="header__contacts">
+            <div class="dropdown">
+              <button class="dropdown__button">
+                <i class="dropdown__icon icon-navigation"></i> г. Севастополь
+              </button>
+              <div class="dropdown__content">
+                <a href="#" class="dropdown__link">Севастополь</a>
+                <a href="#" class="dropdown__link">Симферополь</a>
+                <a href="#" class="dropdown__link">Евпатория</a>
+              </div>
+            </div>
+            <a href="tel:+79787637762" class="header__phone"
+              >+ 7 978 763-77-62</a
+            >
+            <button class="header__call">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo">
+              <img
+                src="/src/img/logos/logo.png"
+                alt="logo"
+                class="header__logo-image"
+            /></a>
+            <nav class="header__nav">
+              <a href="#" class="button button_icon button_catalog">
+                <i class="button__icon icon-catalog"></i> Каталог
+              </a>
+              <a href="#" class="header__nav-link header__nav-link_icon">
+                <i class="header__nav-icon icon-fire"></i> Акции
+              </a>
+              <a href="#" class="header__nav-link">Услуги</a>
+              <a href="#" class="header__nav-link header__nav-link_active"
+                >Доставка и оплата</a
+              >
+            </nav>
+          </div>
+          <div class="header__buttons">
+            <button class="button button_icon button_outline">
+              <i class="button__icon icon-qr"></i> QR-код
+            </button>
+            <button class="button button_icon button_outline">
+              <i class="button__icon icon-water"></i> Заказать воду
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">Доставка и оплата</li>
+          </ol>
+        </nav>
+
+        <div class="page__wrapper">
+          <aside class="aside">
+            <nav class="aside__nav">
+              <a href="#" class="aside__nav-link">Услуги</a>
+              <a href="#" class="aside__nav-link aside__nav-link_active"
+                >Доставка и оплата</a
+              >
+              <a href="#" class="aside__nav-link">О воде</a>
+              <a href="#" class="aside__nav-link">О производстве</a>
+              <a href="#" class="aside__nav-link">Вопрос - ответ</a>
+              <a href="#" class="aside__nav-link"
+                >Политика конфиденциальности</a
+              >
+            </nav>
+
+            <div
+              class="card card_support"
+              style="background-image: url('/src/img/support.jpg')"
+            >
+              <div class="card__wrapper">
+                <div class="card__content">
+                  <h3 class="card__title">Остались вопросы?</h3>
+                  <div class="card__hidden">
+                    <p class="card__text">
+                      Укажите ваши контактные данные и мы свяжемся с Вами в
+                      ближайшее время для консультации.
+                    </p>
+                    <button
+                      class="card__button button button_outline button_outline-light"
+                    >
+                      Связаться
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <main class="main">
+            <section>
+              <h1 class="title">Доставка и оплата</h1>
+              <div
+                class="banner banner_main"
+                style="background-image: url('/src/img/bg/bg-delivery.jpg')"
+              >
+                <div class="badge badge_banner">Бесплатная доставка</div>
+                <h3 class="banner__title">
+                  Производим и доставляем прямо к вам
+                </h3>
+              </div>
+
+              <div class="schedule">
+                <h2 class="title title_small">График доставки</h2>
+                <p class="schedule__text">
+                  Заказ на доставку до 12:00 принимаются накануне - за 1 день до
+                  желаемого дня доставки или ранее. <br />
+                  Доставка в день заказа возможна, если Вы сделали заказ до
+                  12:00.
+                </p>
+
+                <div class="tabs tabs_delivery">
+                  <div class="tabs__buttons">
+                    <button class="tabs__button tabs__button_active">
+                      Балаклава
+                    </button>
+                    <button class="tabs__button">Центр</button>
+                    <button class="tabs__button">Летчики</button>
+                    <button class="tabs__button">Острякова</button>
+                    <button class="tabs__button">б. Камышовая</button>
+                    <button class="tabs__button">б. Стрелецкая</button>
+                    <button class="tabs__button">б. Казачья</button>
+                    <button class="tabs__button">Корабельная сторона</button>
+                  </div>
+                  <div class="tabs__content tabs__content_active">
+                    <div class="map">
+                      <div class="map__locations">
+                        <div class="contact-card contact-card_schedule">
+                          <div class="contact-card__header">
+                            <h3 class="contact-card__title">Балаклава</h3>
+                          </div>
+                          <div
+                            class="contact-card__body contact-card__body_schedule"
+                          >
+                            <div class="contact-card__schedule">
+                              <div class="contact-card__day">Понедельник:</div>
+                              <div class="contact-card__time">10:00-13:00</div>
+                            </div>
+                            <div class="contact-card__schedule">
+                              <div class="contact-card__day">Четверг:</div>
+                              <div class="contact-card__time">09:00-12:00</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="map__frame map__frame_schedule">
+                        <script
+                          type="text/javascript"
+                          charset="utf-8"
+                          async
+                          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af74c3fb48ef88a4c39e5f115498050b610424515c1336a9a7a98efce105d0846&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"
+                        ></script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__content">2</div>
+                  <div class="tabs__content">3</div>
+                  <div class="tabs__content">4</div>
+                  <div class="tabs__content">5</div>
+                  <div class="tabs__content">6</div>
+                  <div class="tabs__content">7</div>
+                  <div class="tabs__content">8</div>
+                </div>
+              </div>
+
+              <div class="payment">
+                <div class="payment__block payment__block_qr">
+                  <div class="payment__wrapper">
+                    <div class="payment__inner">
+                      <h3 class="payment__title">Оплата по QR-коду</h3>
+                      <p class="payment__text">
+                        При оплате по QR-коду убедительная просьба отправлять
+                        чек об оплате, с обязательным указание адреса доставки и
+                        Вашего контактного телефона для идентификации платежа.
+                      </p>
+                      <div class="payment__links">
+                        <a
+                          href="mailto:sales@baidarskaya.com"
+                          class="payment__link"
+                          ><i class="payment__icon icon-mail"></i>
+                          sales@baidarskaya.com
+                        </a>
+                        <a href="#" class="payment__link"
+                          ><i class="payment__icon icon-whatsapp"></i>
+                          +7 (978) 763 77 62
+                        </a>
+                      </div>
+                    </div>
+                    <img class="payment__qr" src="/src/img/qr.jpg" alt="qr" />
+                  </div>
+                </div>
+                <div class="payment__block">
+                  <h3 class="payment__title">Симферополь и Евпатория</h3>
+                  <p class="payment__text">
+                    Для клиентов из г. Симферополь, г. Евпатория и ближайших
+                    населенных пунктов условия доставки уточняйте у наших
+                    <a href="#">дистрибьюторов</a>
+                  </p>
+                  <a
+                    href="#"
+                    class="payment__button button button_icon button_outline button_block"
+                  >
+                    <i class="button__icon icon-file"></i> График доставки
+                  </a>
+                </div>
+                <div class="payment__block">
+                  <h3 class="payment__title">Прием заказов</h3>
+                  <p class="payment__text">
+                    Пн-Сб: с 09:00 до 18:00 <br /><br />
+
+                    Мобильный: <a href="tel:+79787637762">+7 978 763-77-62</a>
+                    <br /><br />
+
+                    Городской: <a href="tel:+78692417983">+7 8692 41-79-83</a>
+                    <br /><br />
+
+                    Вы можете круглосуточно оставлять Ваши заявки на наши
+                    мессенджеры <a href="tel:+79787637762">+7(978) 763-77-62</a>
+                  </p>
+                  <button
+                    class="payment__button button button_icon button_outline button_block"
+                  >
+                    <i class="button__icon icon-water"></i> Заказать онлайн
+                  </button>
+                  <a
+                    href="#"
+                    class="payment__button button button_icon button_outline button_block"
+                  >
+                    <i class="button__icon icon-whatsapp"></i> Whats App
+                  </a>
+                </div>
+                <div class="payment__block">
+                  <h3 class="payment__title">Оплата заказа</h3>
+                  <p class="payment__text">
+                    <b>Для физических лиц</b> - наличный и безналичный расчет
+                    (QR-код) по факту доставки, возможна предоплата и отгрузки
+                    по реестру <br /><br />
+
+                    <b>Для юридических лиц</b> - наличный или безналичный
+                    расчет. Оплата по факту доставки, отсрочка платежа,
+                    накопительная система (оплата в конце месяца), предоплата.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="#" class="footer__logo"
+            ><img
+              src="/src/img/logos/logo-white.png"
+              alt="logo-white"
+              class="footer__logo-image"
+          /></a>
+          <div class="footer__contacts">
+            <div class="footer__location">
+              <div class="dropdown dropdown_light">
+                <button class="dropdown__button">
+                  <i class="dropdown__icon icon-navigation"></i> г. Севастополь
+                </button>
+                <div class="dropdown__content">
+                  <a href="#" class="dropdown__link">Севастополь</a>
+                  <a href="#" class="dropdown__link">Симферополь</a>
+                  <a href="#" class="dropdown__link">Евпатория</a>
+                </div>
+              </div>
+              <a href="tel:+79787637762" class="footer__phone"
+                >+ 7 978 763-77-62</a
+              >
+            </div>
+            <button class="button button_outline button_outline-footer">
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+        <div class="footer__middle">
+          <div class="footer__about">
+            <div class="footer__company">ООО "СевСтройМеханизация"</div>
+            <div class="footer__email">
+              Email:
+              <a href="mailto:sales@baidarskaya.com" class="footer__email-link"
+                >sales@baidarskaya.com</a
+              >
+            </div>
+            <div class="footer__social">
+              <a href="#" target="_blank" class="footer__social-link">
+                <i class="footer__social-icon icon-tg"></i>
+              </a>
+              <a href="#" target="_blank" class="footer__social-link">
+                <i class="footer__social-icon icon-zen"></i>
+              </a>
+              <a href="#" target="_blank" class="footer__social-link">
+                <i class="footer__social-icon icon-vk"></i>
+              </a>
+              <a href="#" target="_blank" class="footer__social-link">
+                <i class="footer__social-icon icon-yt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer__navigation">
+            <nav class="footer__nav">
+              <a href="#" class="footer__nav-link">Каталог</a>
+              <a href="#" class="footer__nav-link">Акции</a>
+              <a href="#" class="footer__nav-link">Услуги</a>
+              <a href="#" class="footer__nav-link">Контакты</a>
+            </nav>
+            <nav class="footer__nav">
+              <a href="#" class="footer__nav-link">Доставка и оплата</a>
+              <a href="#" class="footer__nav-link">О воде</a>
+              <a href="#" class="footer__nav-link">О производстве</a>
+              <a href="#" class="footer__nav-link">Вопрос-ответ</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__meta">
+            <a href="#" target="_blank" class="footer__meta-link"
+              >Разработано: London Adv</a
+            >
+            <a href="#" target="_blank" class="footer__meta-link"
+              >Политика конфиденциальности</a
+            >
+          </div>
+          <div class="footer__copyright">
+            © ООО "СевСтройМеханизация". Все права защищены. Копирование
+            запрещено.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/js/script.js"></script>
+  </body>
+</html>

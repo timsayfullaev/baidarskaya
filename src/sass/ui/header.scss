@@ -1,9 +1,10 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid $blue-400;
   padding: 16px 0;
   &_light {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: absolute;
     top: 0;
     left: 0;
@@ -75,6 +76,10 @@
       color: $blue-800;
       text-decoration: underline;
     }
+    &_active {
+      color: $blue-800;
+      text-decoration: underline;
+    }
   }
   &__contacts {
     display: flex;
@@ -132,6 +137,10 @@
       text-decoration: none;
       transition: all 0.25s;
       &:hover {
+        color: $blue-800;
+        text-decoration: underline;
+      }
+      &_active {
         color: $blue-800;
         text-decoration: underline;
       }

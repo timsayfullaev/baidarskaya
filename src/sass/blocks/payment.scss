@@ -1,0 +1,70 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.payment {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 16px;
+  align-items: start;
+  &__block {
+    border: 1px solid $blue-400;
+    border-radius: 24px;
+    padding: 24px;
+    &_qr {
+      grid-column: 1 / 4;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    color: $black-700;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $black-600;
+    margin-top: 24px;
+    a {
+      color: $black-600;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    column-gap: 32px;
+    margin-top: 24px;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    color: $black-700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+    }
+  }
+  &__icon {
+    font-size: 24px;
+    line-height: 16px;
+  }
+  &__qr {
+    min-width: 372px;
+    min-height: 372px;
+    border: 1px solid $blue-400;
+    border-radius: 20px;
+  }
+  &__button {
+    margin-top: 16px;
+  }
+}

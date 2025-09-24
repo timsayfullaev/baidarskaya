@@ -35,6 +35,10 @@
     flex-direction: column;
     row-gap: 16px;
     margin-top: 24px;
+    &_schedule {
+      row-gap: 12px;
+      margin-top: 16px;
+    }
   }
   &__block {
     display: flex;
@@ -62,5 +66,27 @@
         color: $blue-800;
       }
     }
+  }
+  &_distributors {
+    max-width: 100%;
+  }
+  &_schedule {
+    min-width: 280px;
+  }
+  &__schedule {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__day {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black-700;
+  }
+  &__time {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black-600;
   }
 }

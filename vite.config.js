@@ -10,7 +10,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        // page: "page.html",
+        services: "services.html",
+        promotions: "promotions.html",
+        faq: "faq.html",
+        contacts: "contacts.html",
+        delivery: "delivery.html",
+        about_water: "about-water.html",
+        about_production: "about-production.html",
+        policy: "policy.html",
+        404: "404.html",
       },
     },
   },
@@ -43,5 +51,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/baidarskaya/dist/", // имя твоего репозитория
+  base: "/baidarskaya/dist/",
 });

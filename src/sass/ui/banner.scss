@@ -1,0 +1,38 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.banner {
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 312px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 127, 255, 0.3) 100%
+    );
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    color: $white;
+    position: relative;
+    z-index: 1;
+  }
+  &_main {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,29 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.main {
+  margin-top: 40px;
+  &__services,
+  &__promotions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+  &__faq {
+    margin-top: 40px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $black-600;
+    padding: 0 24px;
+    margin-top: 40px;
+  }
+  &__policy {
+    font-weight: 400;
+    font-size: 14px;
+    color: $black-700;
+    margin-top: 40px;
+  }
+}

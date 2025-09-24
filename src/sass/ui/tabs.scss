@@ -1,0 +1,39 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.tabs {
+  &_delivery {
+    margin-top: 24px;
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 8px;
+  }
+  &__button {
+    border: 1px solid $blue-800;
+    border-radius: 14px;
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $blue-800;
+    background: none;
+    transition: all 0.25s;
+    cursor: pointer;
+    &:hover {
+      background: $blue-800;
+      color: $white;
+    }
+    &_active {
+      background: $blue-800;
+      color: $white;
+    }
+  }
+  &__content {
+    display: none;
+    margin-top: 24px;
+    &_active {
+      display: block;
+    }
+  }
+}
