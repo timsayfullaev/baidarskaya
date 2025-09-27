@@ -1,11 +1,13 @@
 import "modern-normalize";
 
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Thumbs, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/thumbs";
+import "swiper/css/effect-fade";
 
 import "/src/sass/style.scss";
 
@@ -57,5 +59,33 @@ try {
         content.style.height = content.scrollHeight + "px";
       }
     });
+  });
+} catch (error) {}
+
+try {
+  const thumbsSwiper = new Swiper(".product__thumbnails", {
+    direction: "vertical",
+    spaceBetween: 12,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper = new Swiper(".product__slider", {
+    modules: [Thumbs, EffectFade],
+    spaceBetween: 12,
+    effect: "fade",
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+  });
+} catch (error) {}
+
+try {
+  const swiper = new Swiper(".related__slider", {
+    modules: [Pagination],
+    pagination: {
+      el: ".related__pagination",
+    },
+    slidesPerView: 4,
   });
 } catch (error) {}

@@ -19,6 +19,8 @@ export default defineConfig({
         about_production: "about-production.html",
         policy: "policy.html",
         404: "404.html",
+        catalog: "catalog.html",
+        product: "product.html",
       },
     },
   },
@@ -51,5 +53,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/baidarskaya/dist/",
+  // base: "/baidarskaya/dist/",
 });

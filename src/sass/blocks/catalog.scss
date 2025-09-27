@@ -1,0 +1,29 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.catalog {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__filters {
+    display: flex;
+    column-gap: 8px;
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px -16px 0 -16px;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+}

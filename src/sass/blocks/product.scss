@@ -1,0 +1,107 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.product {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 574px 456px 338px;
+    column-gap: 16px;
+    margin-top: 32px;
+    align-items: start;
+  }
+  &__images {
+    display: flex;
+    column-gap: 16px;
+  }
+  &__thumbnails {
+    min-width: 102px;
+    max-height: 477px;
+    .swiper-slide {
+      cursor: pointer;
+    }
+    .swiper-slide-thumb-active {
+      cursor: auto;
+    }
+  }
+  &__thumbnail {
+    border: 1px solid $blue-400;
+    border-radius: 8px;
+    width: 102px;
+    height: 107px;
+    object-fit: contain;
+  }
+  &__images {
+    min-width: 456px;
+  }
+  &__image {
+    border: 1px solid $blue-400;
+    border-radius: 20px;
+    width: 456px;
+    height: 477px;
+    object-fit: cover;
+  }
+  &__description {
+    padding: 0px 16px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $black-700;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $black-600;
+    margin-top: 16px;
+  }
+  &__order {
+    border: 1px solid $blue-400;
+    border-radius: 20px;
+    padding: 16px;
+  }
+  &__price {
+    display: flex;
+    align-items: end;
+    column-gap: 8px;
+    &-old {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      text-decoration: line-through;
+      color: $black-600;
+    }
+    &-current {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: $black-700;
+    }
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black-700;
+    margin-top: 16px;
+  }
+  &__excerpt {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $black-600;
+    margin-top: 8px;
+  }
+  &__button {
+    margin-top: 16px;
+  }
+  &__more {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $black-600;
+    margin-top: 16px;
+    display: block;
+    text-align: center;
+  }
+}

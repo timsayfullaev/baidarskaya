@@ -33,4 +33,15 @@
   &__content {
     display: none;
   }
+  &_sort {
+    .dropdown__button {
+      font-weight: 400;
+      color: $blue-800;
+      text-decoration: none;
+    }
+    .dropdown__icon {
+      font-size: 24px;
+      line-height: 14px;
+    }
+  }
 }

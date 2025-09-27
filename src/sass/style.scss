@@ -21,6 +21,7 @@
 @use "/src/sass/ui/main.scss";
 @use "/src/sass/ui/banner.scss";
 @use "/src/sass/ui/tabs.scss";
+@use "/src/sass/ui/product-card.scss";
 
 @use "/src/sass/blocks/promo.scss";
 @use "/src/sass/blocks/goods.scss";
@@ -32,3 +33,6 @@
 @use "/src/sass/blocks/payment.scss";
 @use "/src/sass/blocks/specs.scss";
 @use "/src/sass/blocks/error.scss";
+@use "/src/sass/blocks/catalog.scss";
+@use "/src/sass/blocks/product.scss";
+@use "/src/sass/blocks/related.scss";
