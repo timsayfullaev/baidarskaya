@@ -87,5 +87,6 @@ try {
       el: ".related__pagination",
     },
     slidesPerView: 4,
+    grabCursor: true,
   });
 } catch (error) {}

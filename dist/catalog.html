@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <title>Catalog</title>
     <script type="module" crossorigin src="/baidarskaya/dist/assets/script-DSeL0-AH.js"></script>
     <link rel="stylesheet" crossorigin href="/baidarskaya/dist/assets/script-3PS1vc1i.css">
   </head>
@@ -49,9 +49,7 @@
               <a href="#" class="header__nav-link header__nav-link_icon">
                 <i class="header__nav-icon icon-fire"></i> Акции
               </a>
-              <a href="#" class="header__nav-link header__nav-link_active"
-                >Услуги</a
-              >
+              <a href="#" class="header__nav-link">Услуги</a>
               <a href="#" class="header__nav-link">Доставка и оплата</a>
             </nav>
           </div>
@@ -74,23 +72,17 @@
             <li class="breadcrumbs__item">
               <a href="#" class="breadcrumbs__link">Главная</a>
             </li>
-            <li class="breadcrumbs__item">Услуги</li>
+            <li class="breadcrumbs__item">Каталог</li>
           </ol>
         </nav>
 
         <div class="page__wrapper">
           <aside class="aside">
             <nav class="aside__nav">
-              <a href="#" class="aside__nav-link aside__nav-link_active"
-                >Услуги</a
-              >
-              <a href="#" class="aside__nav-link">Доставка и оплата</a>
-              <a href="#" class="aside__nav-link">О воде</a>
-              <a href="#" class="aside__nav-link">О производстве</a>
-              <a href="#" class="aside__nav-link">Вопрос - ответ</a>
-              <a href="#" class="aside__nav-link"
-                >Политика конфиденциальности</a
-              >
+              <a href="#" class="aside__nav-link">Вода</a>
+              <a href="#" class="aside__nav-link">Кулеры</a>
+              <a href="#" class="aside__nav-link">Помпы</a>
+              <a href="#" class="aside__nav-link">Аксессуары</a>
             </nav>
 
             <div
@@ -118,74 +110,146 @@
 
           <main class="main">
             <section>
-              <h1 class="title">Услуги</h1>
-              <div class="main__services">
-                <div
-                  class="card"
-                  style="
-                    background-image: url('/baidarskaya/dist/assets/processing-CQLKWOt3.jpg');
-                  "
-                >
-                  <div class="card__wrapper">
-                    <div class="badge badge_card">от 1 200 ₽</div>
-                    <div class="card__content">
-                      <h3 class="card__title">Санитарная обработка</h3>
-                      <div class="card__hidden">
-                        <p class="card__text">
-                          Распространяется на кулеры, приобретенных как у нас,
-                          так и в других фирмах.
-                        </p>
-                        <button
-                          class="card__button button button_outline button_outline-light"
-                        >
-                          Подробности
-                        </button>
-                      </div>
+              <div class="catalog">
+                <div class="catalog__header">
+                  <h1 class="title">Каталог</h1>
+                  <a href="#" class="button button_icon">
+                    <i class="button__icon icon-cart"></i> Корзина
+                  </a>
+                </div>
+                <div class="catalog__controls">
+                  <div class="catalog__filters">
+                    <div class="badge badge_filter">Настольные</div>
+                    <div class="badge badge_filter">Напольные</div>
+                    <div class="badge badge_filter">С нагревом</div>
+                    <div class="badge badge_filter">С охлаждением</div>
+                    <div class="badge badge_filter">С холодильником</div>
+                  </div>
+                  <div class="dropdown dropdown_sort">
+                    <button class="dropdown__button">
+                      Сортировка
+                      <i class="dropdown__icon icon-down"></i>
+                    </button>
+                    <div class="dropdown__content">
+                      <a href="#" class="dropdown__link">Севастополь</a>
+                      <a href="#" class="dropdown__link">Симферополь</a>
+                      <a href="#" class="dropdown__link">Евпатория</a>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="card"
-                  style="background-image: url('/baidarskaya/dist/assets/repair-Cg2snU_M.jpg')"
-                >
-                  <div class="card__wrapper">
-                    <div class="badge badge_card">от 1 200 ₽</div>
-                    <div class="card__content">
-                      <h3 class="card__title">Ремонт кулеров</h3>
-                      <div class="card__hidden">
-                        <p class="card__text">
-                          Распространяется на кулеры, приобретенных как у нас,
-                          так и в других фирмах.
-                        </p>
-                        <button
-                          class="card__button button button_outline button_outline-light"
-                        >
-                          Подробности
-                        </button>
+                <div class="catalog__products">
+                  <div class="product-card">
+                    <div class="product-card__wrapper">
+                      <a href="#" class="product-card__thumbnail">
+                        <img
+                          src="/baidarskaya/dist/assets/cooler-catalog-CIFEyxyQ.png"
+                          alt="cooler-catalog"
+                          class="product-card__image"
+                        />
+                        <div class="badge badge_product">-10%</div>
+                      </a>
+                      <div class="product-card__price">
+                        <div class="product-card__price-old">5 000 ₽</div>
+                        <div class="product-card__price-current">3 850 ₽</div>
                       </div>
+                      <h2 class="product-card__name">
+                        <a href="#">Водораздатчик Aqua Work 0.7-TWR </a>
+                      </h2>
+                      <p class="product-card__excerpt">
+                        Настольный, с нагревом
+                      </p>
+                      <a
+                        href="#"
+                        class="product-card__button button button_icon button_block"
+                      >
+                        <i class="button__icon icon-cart"></i> В корзину
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card__wrapper">
+                      <a href="#" class="product-card__thumbnail">
+                        <img
+                          src="/baidarskaya/dist/assets/cooler-catalog-CIFEyxyQ.png"
+                          alt="cooler-catalog"
+                          class="product-card__image"
+                        />
+                      </a>
+                      <div class="product-card__price">
+                        <div class="product-card__price-old">5 000 ₽</div>
+                        <div class="product-card__price-current">3 850 ₽</div>
+                      </div>
+                      <h2 class="product-card__name">
+                        <a href="#">Водораздатчик Aqua Work 0.7-TWR </a>
+                      </h2>
+                      <p class="product-card__excerpt">
+                        Настольный, с нагревом
+                      </p>
+                      <a
+                        href="#"
+                        class="product-card__button button button_icon button_block"
+                      >
+                        <i class="button__icon icon-cart"></i> В корзину
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card__wrapper">
+                      <a href="#" class="product-card__thumbnail">
+                        <img
+                          src="/baidarskaya/dist/assets/cooler-catalog-CIFEyxyQ.png"
+                          alt="cooler-catalog"
+                          class="product-card__image"
+                        />
+                      </a>
+                      <div class="product-card__price">
+                        <div class="product-card__price-current">3 850 ₽</div>
+                      </div>
+                      <h2 class="product-card__name">
+                        <a href="#">Водораздатчик Aqua Work 0.7-TWR </a>
+                      </h2>
+                      <p class="product-card__excerpt">
+                        Настольный, с нагревом
+                      </p>
+                      <a
+                        href="#"
+                        class="product-card__button button button_icon button_block"
+                      >
+                        <i class="button__icon icon-cart"></i> В корзину
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card">
+                    <div class="product-card__wrapper">
+                      <a href="#" class="product-card__thumbnail">
+                        <img
+                          src="/baidarskaya/dist/assets/cooler-catalog-CIFEyxyQ.png"
+                          alt="cooler-catalog"
+                          class="product-card__image"
+                        />
+                        <div class="badge badge_product">-10%</div>
+                      </a>
+                      <div class="product-card__price">
+                        <div class="product-card__price-old">5 000 ₽</div>
+                        <div class="product-card__price-current">3 850 ₽</div>
+                      </div>
+                      <h2 class="product-card__name">
+                        <a href="#">Водораздатчик Aqua Work 0.7-TWR </a>
+                      </h2>
+                      <p class="product-card__excerpt">
+                        Настольный, с нагревом
+                      </p>
+                      <a
+                        href="#"
+                        class="product-card__button button button_icon button_block"
+                      >
+                        <i class="button__icon icon-cart"></i> В корзину
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="card card_dim"
-                  style="background-image: url('/baidarskaya/dist/assets/service-DewSENXf.jpg')"
-                >
-                  <div class="card__wrapper">
-                    <div class="badge badge_card">Бесплатно</div>
-                    <div class="card__content">
-                      <h3 class="card__title">Гарантийное обслуживание</h3>
-                      <div class="card__hidden">
-                        <p class="card__text">
-                          Только для кулеров, приобретенных в нашей компании!
-                        </p>
-                        <button
-                          class="card__button button button_outline button_outline-light"
-                        >
-                          Подробности
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                <div class="catalog__pagination">
+                  <button class="button button_outline">Загрузить еще</button>
                 </div>
               </div>
             </section>
