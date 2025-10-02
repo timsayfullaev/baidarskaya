@@ -31,8 +31,9 @@
     margin-top: 24px;
     a {
       color: $black-600;
+      transition: all 0.25s;
       &:hover {
-        text-decoration: none;
+        color: $blue-800;
       }
     }
   }

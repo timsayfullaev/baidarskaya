@@ -1,0 +1,13 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 24px;
+    &_action {
+      row-gap: 8px;
+    }
+  }
+}

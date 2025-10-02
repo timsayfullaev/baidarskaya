@@ -1,7 +1,15 @@
 import "modern-normalize";
 
 import Swiper from "swiper";
-import { Navigation, Pagination, Thumbs, EffectFade } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  Thumbs,
+  EffectFade,
+} from "swiper/modules";
+
+import MicroModal from "micromodal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +21,7 @@ import "/src/sass/style.scss";
 
 try {
   const swiper = new Swiper(".promo__slider", {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     pagination: {
       el: ".promo__pagination",
     },
@@ -22,6 +30,10 @@ try {
       prevEl: ".promo__arrow_prev",
     },
     loop: true,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: true,
+    },
   });
 } catch (error) {}
 
@@ -90,3 +102,25 @@ try {
     grabCursor: true,
   });
 } catch (error) {}
+
+MicroModal.init({
+  disableFocus: true,
+  awaitCloseAnimation: true,
+});
+
+const form = document.querySelector("#callback form");
+const callbackModal = document.getElementById("callback");
+
+if (form && callbackModal) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    callbackModal.classList.remove("is-open");
+
+    callbackModal.setAttribute("aria-hidden", "true");
+
+    MicroModal.show("tnx");
+
+    this.reset();
+  });
+}

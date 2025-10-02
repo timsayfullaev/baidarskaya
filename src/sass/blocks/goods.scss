@@ -4,13 +4,12 @@
 .goods {
   &__wrapper {
     display: flex;
-    justify-content: space-between;
     column-gap: 18px;
   }
   &__card {
     border-radius: 16px;
     padding: 24px;
-    width: 692px;
+    width: 100%;
     min-height: 460px;
     position: relative;
     overflow: hidden;
@@ -73,6 +72,7 @@
     left: 27px;
     bottom: 0;
     filter: drop-shadow(0 0 75px $white);
+    z-index: -1;
   }
   &__content {
     &_water {

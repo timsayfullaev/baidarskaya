@@ -1,0 +1,44 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.select {
+  position: relative;
+  &:before {
+    content: "\e800";
+    font-family: "fontello";
+    position: absolute;
+    font-size: 24px;
+    line-height: 24px;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    color: $black-700;
+    pointer-events: none;
+  }
+  &__field {
+    appearance: none;
+    border: 1px solid $black-600;
+    border-radius: 24px;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black-700;
+    display: block;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    height: 48px;
+  }
+  &__label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black-600;
+    position: absolute;
+    left: 24px;
+    font-size: 12px;
+    top: -8px;
+    background: $white;
+    padding: 0 2px;
+  }
+}

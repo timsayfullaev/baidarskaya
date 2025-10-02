@@ -1,0 +1,45 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  &__field {
+    appearance: none;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 100%;
+    border: 1px solid $blue-800;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "";
+      border-radius: 100%;
+      min-width: 12px;
+      min-height: 12px;
+      transition: all 0.25s;
+    }
+    &:checked::before {
+      background: $blue-800;
+    }
+  }
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    color: $black-600;
+    cursor: pointer;
+  }
+  &_checkbox {
+    font-size: 12px;
+    display: block;
+  }
+  &__link {
+    color: $black-600;
+    transition: all 0.25s;
+    &:hover {
+      color: $blue-800;
+    }
+  }
+}

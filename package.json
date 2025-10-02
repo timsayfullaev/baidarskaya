@@ -15,6 +15,7 @@
     "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
+    "micromodal": "^0.6.1",
     "modern-normalize": "^3.0.1",
     "swiper": "^11.2.10"
   }

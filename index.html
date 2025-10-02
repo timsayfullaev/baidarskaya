@@ -30,7 +30,9 @@
               <a href="tel:+79787637762" class="header__phone"
                 >+ 7 978 763-77-62</a
               >
-              <button class="header__call">Заказать звонок</button>
+              <button class="header__call" data-micromodal-trigger="callback">
+                Заказать звонок
+              </button>
             </div>
           </div>
           <div class="header__bottom">
@@ -53,7 +55,10 @@
               </nav>
             </div>
             <div class="header__buttons">
-              <button class="button button_icon button_outline">
+              <button
+                class="button button_icon button_outline"
+                data-micromodal-trigger="qr"
+              >
                 <i class="button__icon icon-qr"></i> QR-код
               </button>
               <button class="button button_icon button_outline">
@@ -703,6 +708,154 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal micromodal-slide" id="callback" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="callback-title">
+              Заказать обратный звонок
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main class="modal__content" id="callback-content">
+            <p class="modal__text">
+              Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+              время.
+            </p>
+            <form action="#" class="form" id="formCallback">
+              <div class="form__group">
+                <div class="input">
+                  <input
+                    type="text"
+                    name="callbackName"
+                    id="callbackName"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="callbackName" class="input__label"
+                    >Ваше имя</label
+                  >
+                </div>
+                <div class="input">
+                  <input
+                    type="tel"
+                    name="callbackPhone"
+                    id="callbackPhone"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="callbackPhone" class="input__label"
+                    >Номер телефона</label
+                  >
+                </div>
+                <div class="select">
+                  <select
+                    name="callbackMethod"
+                    id="callbackMethod"
+                    class="select__field"
+                  >
+                    <option value="telegram">Telegram</option>
+                    <option value="whatsapp">WhatsApp</option>
+                  </select>
+                  <label for="callbackMethod" class="select__label"
+                    >Способ связи</label
+                  >
+                </div>
+              </div>
+              <div class="form__group form__group_action">
+                <button class="button button_block">Отправить</button>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="callbackAgree"
+                    name="callbackAgree"
+                    class="checkbox__field"
+                    required
+                    checked
+                  />
+                  <label for="callbackAgree" class="checkbox__label">
+                    Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                    <a href="#" class="checkbox__link"
+                      >Условиями обработки персональных данных</a
+                    >
+                  </label>
+                </div>
+              </div>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="tnx" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="tnx-title">Оплата по QR-коду</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main class="modal__content" id="tnx-content">
+            <p class="modal__text">
+              Вы можете оплатить заказ с помозью QR-кода.
+              <br /><br />
+              Покупатель считывает QR-код мобильным приложением своего банка,
+              проверяет сумму и подтверждает платеж.
+            </p>
+            <img src="/src/img/qr.jpg" alt="qr" class="modal__qr" />
+            <p class="modal__text modal__text_more">
+              Подробности просьба уточнять в разделе сайта
+              <a href="#">"Доставка и оплата"</a>.
+            </p>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="qr" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="qr-title">Оплата по QR-коду</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main class="modal__content" id="qr-content">
+            <p class="modal__text">
+              Вы можете оплатить заказ с помозью QR-кода.
+              <br /><br />
+              Покупатель считывает QR-код мобильным приложением своего банка,
+              проверяет сумму и подтверждает платеж.
+            </p>
+            <img src="/src/img/qr.jpg" alt="qr" class="modal__qr" />
+            <p class="modal__text modal__text_more">
+              Подробности просьба уточнять в разделе сайта
+              <a href="#">"Доставка и оплата"</a>.
+            </p>
+          </main>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/js/script.js"></script>
   </body>
 </html>
