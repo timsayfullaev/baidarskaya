@@ -38,4 +38,13 @@
       -moz-appearance: textfield;
     }
   }
+  &_modal {
+    border-color: $blue-800;
+    .quantity__button {
+      color: $blue-800;
+    }
+    .quantity__number {
+      color: $blue-800;
+    }
+  }
 }

@@ -106,21 +106,56 @@ try {
 MicroModal.init({
   disableFocus: true,
   awaitCloseAnimation: true,
+  disableScroll: true,
 });
 
-const form = document.querySelector("#callback form");
-const callbackModal = document.getElementById("callback");
+try {
+  const form = document.querySelector("#callback form");
+  const callbackModal = document.getElementById("callback");
 
-if (form && callbackModal) {
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  if (form && callbackModal) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    callbackModal.classList.remove("is-open");
+      callbackModal.classList.remove("is-open");
 
-    callbackModal.setAttribute("aria-hidden", "true");
+      callbackModal.setAttribute("aria-hidden", "true");
 
-    MicroModal.show("tnx");
+      MicroModal.show("thanks");
 
-    this.reset();
-  });
-}
+      this.reset();
+    });
+  }
+} catch (error) {}
+
+try {
+  const btnOrder = document.querySelector("#orderWater .modal__button");
+  const modalWater = document.getElementById("orderWater");
+  const modalDelivery = document.getElementById("orderDelivery");
+
+  if (btnOrder && modalDelivery) {
+    btnOrder.addEventListener("click", () => {
+      modalWater.classList.remove("is-open");
+      modalWater.setAttribute("aria-hidden", "true");
+
+      MicroModal.show("orderDelivery");
+    });
+  }
+
+  const formDelivery = document.querySelector("#orderDelivery form");
+  const modalDeliveryEl = document.getElementById("orderDelivery");
+  const modalFormed = document.getElementById("orderFormed");
+
+  if (formDelivery && modalDeliveryEl && modalFormed) {
+    formDelivery.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      modalDeliveryEl.classList.remove("is-open");
+      modalDeliveryEl.setAttribute("aria-hidden", "true");
+
+      MicroModal.show("orderFormed");
+
+      this.reset();
+    });
+  }
+} catch (error) {}

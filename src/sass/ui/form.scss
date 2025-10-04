@@ -1,11 +1,14 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
   &__group {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    margin-top: 24px;
     &_action {
       row-gap: 8px;
     }
