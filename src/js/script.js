@@ -106,55 +106,71 @@ try {
 MicroModal.init({
   disableFocus: true,
   awaitCloseAnimation: true,
-  disableScroll: true,
 });
 
+function modalFormHandler(modalId, successModalId) {
+  const modal = document.getElementById(modalId);
+  const form = modal ? modal.querySelector("form") : null;
+
+  if (!modal || !form) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Закрываем текущую модалку
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+
+    // Показываем модалку "спасибо"
+    MicroModal.show(successModalId);
+
+    // Очищаем форму
+    this.reset();
+  });
+}
+
 try {
-  const form = document.querySelector("#callback form");
-  const callbackModal = document.getElementById("callback");
-
-  if (form && callbackModal) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      callbackModal.classList.remove("is-open");
-
-      callbackModal.setAttribute("aria-hidden", "true");
-
-      MicroModal.show("thanks");
-
-      this.reset();
-    });
-  }
+  modalFormHandler("callback", "callbackThanks");
+  modalFormHandler("support", "supportThanks");
+  modalFormHandler("contact", "contactThanks");
 } catch (error) {}
 
 try {
+  // Получаем элементы модалок и кнопку "Оформить заказ" из первой модалки (orderWater)
   const btnOrder = document.querySelector("#orderWater .modal__button");
   const modalWater = document.getElementById("orderWater");
   const modalDelivery = document.getElementById("orderDelivery");
 
+  // Если элементы существуют, вешаем обработчик клика
   if (btnOrder && modalDelivery) {
     btnOrder.addEventListener("click", () => {
+      // Закрываем первую модалку (вода)
       modalWater.classList.remove("is-open");
       modalWater.setAttribute("aria-hidden", "true");
 
+      // Открываем вторую модалку (доставка)
       MicroModal.show("orderDelivery");
     });
   }
 
+  // Получаем элементы формы и модалок для второго шага (доставка)
   const formDelivery = document.querySelector("#orderDelivery form");
   const modalDeliveryEl = document.getElementById("orderDelivery");
   const modalFormed = document.getElementById("orderFormed");
 
+  // Если форма и модалки существуют, добавляем обработчик сабмита
   if (formDelivery && modalDeliveryEl && modalFormed) {
     formDelivery.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Закрываем модалку "доставка"
       modalDeliveryEl.classList.remove("is-open");
       modalDeliveryEl.setAttribute("aria-hidden", "true");
 
+      // Открываем модалку "заказ оформлен"
       MicroModal.show("orderFormed");
 
+      // Сбрасываем форму
       this.reset();
     });
   }

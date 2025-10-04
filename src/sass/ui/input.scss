@@ -18,11 +18,18 @@
     &:focus {
       border: 1px solid $blue-800;
     }
+    &::placeholder {
+      color: transparent;
+    }
     &:focus + .input__label,
-    &:valid + .input__label {
+    &:not(:placeholder-shown) + .input__label {
       font-size: 12px;
       top: 0;
       padding: 0 2px;
+    }
+    &_textarea {
+      resize: none;
+      height: 140px;
     }
   }
   &__label {
@@ -37,5 +44,8 @@
     cursor: text;
     background: $white;
     transition: all 0.25s;
+    &_textarea {
+      top: 36px;
+    }
   }
 }

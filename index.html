@@ -537,6 +537,7 @@
                   </p>
                   <button
                     class="card__button button button_outline button_outline-light"
+                    data-micromodal-trigger="support"
                   >
                     Связаться
                   </button>
@@ -556,7 +557,12 @@
             <div class="contact-card">
               <div class="contact-card__header">
                 <h3 class="contact-card__title">Офис компании</h3>
-                <button class="contact-card__contact">Связаться</button>
+                <button
+                  class="contact-card__contact"
+                  data-micromodal-trigger="contact"
+                >
+                  Связаться
+                </button>
               </div>
               <div class="contact-card__body">
                 <div class="contact-card__block">
@@ -590,7 +596,12 @@
             <div class="contact-card">
               <div class="contact-card__header">
                 <h3 class="contact-card__title">Производство</h3>
-                <button class="contact-card__contact">Связаться</button>
+                <button
+                  class="contact-card__contact"
+                  data-micromodal-trigger="contact"
+                >
+                  Связаться
+                </button>
               </div>
               <div class="contact-card__body">
                 <div class="contact-card__block">
@@ -752,6 +763,7 @@
                     class="input__field"
                     autocomplete="off"
                     required
+                    placeholder="Ваше имя"
                   />
                   <label for="callbackName" class="input__label"
                     >Ваше имя</label
@@ -765,6 +777,7 @@
                     class="input__field"
                     autocomplete="off"
                     required
+                    placeholder="Номер телефона"
                   />
                   <label for="callbackPhone" class="input__label"
                     >Номер телефона</label
@@ -813,11 +826,11 @@
       </div>
     </div>
 
-    <div class="modal micromodal-slide" id="thanks" aria-hidden="true">
+    <div class="modal micromodal-slide" id="callbackThanks" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true">
           <header class="modal__header">
-            <h2 class="modal__title" id="thanks-title">
+            <h2 class="modal__title" id="callbackThanks-title">
               Заказать обратный звонок
             </h2>
             <button
@@ -830,7 +843,7 @@
           </header>
           <main
             class="modal__content modal__content_thanks"
-            id="thanks-content"
+            id="callbackThanks-content"
           >
             <div class="modal__thanks">
               <p class="modal__thanks-text">
@@ -968,6 +981,7 @@
                     class="input__field"
                     autocomplete="off"
                     required
+                    placeholder="Ваше имя"
                   />
                   <label for="orderDeliveryName" class="input__label"
                     >Ваше имя</label
@@ -981,6 +995,7 @@
                     class="input__field"
                     autocomplete="off"
                     required
+                    placeholder="Номер телефона"
                   />
                   <label for="orderDeliveryPhone" class="input__label"
                     >Номер телефона</label
@@ -1034,6 +1049,7 @@
                     class="input__field"
                     autocomplete="off"
                     required
+                    placeholder="Улица, дом, кв"
                   />
                   <label for="orderDeliveryAddress" class="input__label"
                     >Улица, дом, кв</label
@@ -1095,6 +1111,292 @@
                 <div class="modal__order-sum">Сумма:</div>
                 <div class="modal__order-total">5 000 ₽</div>
               </div>
+            </div>
+            <button
+              class="modal__button button button_block"
+              data-micromodal-close
+            >
+              Закрыть
+            </button>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="support" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="support-title">Остались вопросы?</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main class="modal__content" id="support-content">
+            <p class="modal__text">
+              Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+              время для консультации.
+            </p>
+            <form action="#" class="modal__form form" id="formSupport">
+              <div class="form__group">
+                <div class="input">
+                  <input
+                    type="text"
+                    name="supportName"
+                    id="supportName"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                    placeholder="Ваше имя"
+                  />
+                  <label for="supportName" class="input__label">Ваше имя</label>
+                </div>
+                <div class="input">
+                  <input
+                    type="tel"
+                    name="supportPhone"
+                    id="supportPhone"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                    placeholder="Номер телефона"
+                  />
+                  <label for="supportPhone" class="input__label"
+                    >Номер телефона</label
+                  >
+                </div>
+                <div class="select">
+                  <select
+                    name="supportMethod"
+                    id="supportMethod"
+                    class="select__field"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Выберите способ связи
+                    </option>
+                    <option value="telegram">Telegram</option>
+                    <option value="whatsapp">WhatsApp</option>
+                  </select>
+                  <label for="supportMethod" class="select__label"
+                    >Способ связи</label
+                  >
+                </div>
+                <div class="input">
+                  <textarea
+                    name="supportMessage"
+                    id="supportMessage"
+                    class="input__field input__field_textarea"
+                    placeholder="Ваше сообщение"
+                  ></textarea>
+                  <label
+                    for="supportMessage"
+                    class="input__label input__label_textarea"
+                    >Ваше сообщение</label
+                  >
+                </div>
+              </div>
+              <div class="form__group form__group_action">
+                <button class="button button_block">Отправить</button>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="supportAgree"
+                    name="supportAgree"
+                    class="checkbox__field"
+                    required
+                    checked
+                  />
+                  <label for="supportAgree" class="checkbox__label">
+                    Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                    <a href="#" class="checkbox__link"
+                      >Условиями обработки персональных данных</a
+                    >
+                  </label>
+                </div>
+              </div>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="supportThanks" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="supportThanks-title">
+              Остались вопросы?
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main
+            class="modal__content modal__content_thanks"
+            id="supportThanks-content"
+          >
+            <div class="modal__thanks">
+              <p class="modal__thanks-text">
+                Спасибо! <br />
+                Ваша заявка на обратный звонок успешно отправлена.
+              </p>
+              <img
+                src="/src/img/success.svg"
+                alt="success"
+                class="modal__thanks-success"
+              />
+            </div>
+            <button
+              class="modal__button button button_block"
+              data-micromodal-close
+            >
+              Закрыть
+            </button>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="contact" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="contact-title">Связаться с нами</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main class="modal__content" id="contact-content">
+            <p class="modal__text">
+              Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+              время для консультации.
+            </p>
+            <form action="#" class="modal__form form" id="formContact">
+              <div class="form__group">
+                <div class="input">
+                  <input
+                    type="text"
+                    name="contactName"
+                    id="contactName"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                    placeholder="Ваше имя"
+                  />
+                  <label for="contactName" class="input__label">Ваше имя</label>
+                </div>
+                <div class="input">
+                  <input
+                    type="tel"
+                    name="contactPhone"
+                    id="contactPhone"
+                    class="input__field"
+                    autocomplete="off"
+                    required
+                    placeholder="Номер телефона"
+                  />
+                  <label for="contactPhone" class="input__label"
+                    >Номер телефона</label
+                  >
+                </div>
+                <div class="select">
+                  <select
+                    name="contactMethod"
+                    id="contactMethod"
+                    class="select__field"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Выберите способ связи
+                    </option>
+                    <option value="telegram">Telegram</option>
+                    <option value="whatsapp">WhatsApp</option>
+                  </select>
+                  <label for="contactMethod" class="select__label"
+                    >Способ связи</label
+                  >
+                </div>
+                <div class="input">
+                  <textarea
+                    name="contactMessage"
+                    id="contactMessage"
+                    class="input__field input__field_textarea"
+                    placeholder="Ваше сообщение"
+                  ></textarea>
+                  <label
+                    for="contactMessage"
+                    class="input__label input__label_textarea"
+                    >Ваше сообщение</label
+                  >
+                </div>
+              </div>
+              <div class="form__group form__group_action">
+                <button class="button button_block">Отправить</button>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="contactAgree"
+                    name="contactAgree"
+                    class="checkbox__field"
+                    required
+                    checked
+                  />
+                  <label for="contactAgree" class="checkbox__label">
+                    Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                    <a href="#" class="checkbox__link"
+                      >Условиями обработки персональных данных</a
+                    >
+                  </label>
+                </div>
+              </div>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="contactThanks" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title" id="contactThanks-title">
+              Связаться с нами
+            </h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <i class="modal__close-icon icon-close"></i>
+            </button>
+          </header>
+          <main
+            class="modal__content modal__content_thanks"
+            id="contactThanks-content"
+          >
+            <div class="modal__thanks">
+              <p class="modal__thanks-text">
+                Спасибо! <br />
+                Ваша заявка на обратный звонок успешно отправлена.
+              </p>
+              <img
+                src="/src/img/success.svg"
+                alt="success"
+                class="modal__thanks-success"
+              />
             </div>
             <button
               class="modal__button button button_block"
