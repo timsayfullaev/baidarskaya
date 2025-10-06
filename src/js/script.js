@@ -106,6 +106,7 @@ try {
 MicroModal.init({
   disableFocus: true,
   awaitCloseAnimation: true,
+  disableScroll: true,
 });
 
 function modalFormHandler(modalId, successModalId) {
@@ -120,6 +121,9 @@ function modalFormHandler(modalId, successModalId) {
     // Закрываем текущую модалку
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
+
+    // Возвращаем скролл корректно
+    document.body.style.overflow = "";
 
     // Показываем модалку "спасибо"
     MicroModal.show(successModalId);
@@ -148,6 +152,9 @@ try {
       modalWater.classList.remove("is-open");
       modalWater.setAttribute("aria-hidden", "true");
 
+      // Возвращаем скролл корректно
+      document.body.style.overflow = "";
+
       // Открываем вторую модалку (доставка)
       MicroModal.show("orderDelivery");
     });
@@ -166,6 +173,9 @@ try {
       // Закрываем модалку "доставка"
       modalDeliveryEl.classList.remove("is-open");
       modalDeliveryEl.setAttribute("aria-hidden", "true");
+
+      // Возвращаем скролл корректно
+      document.body.style.overflow = "";
 
       // Открываем модалку "заказ оформлен"
       MicroModal.show("orderFormed");
