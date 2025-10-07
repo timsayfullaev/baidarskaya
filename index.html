@@ -428,7 +428,7 @@
                     </button>
                   </header>
                   <main
-                    class="popup__content modal__content_qr"
+                    class="popup__content"
                     id="promotionOrganizations-content"
                   >
                     <div class="popup__text">
@@ -502,10 +502,7 @@
                       <i class="popup__close-icon icon-share"></i>
                     </button>
                   </header>
-                  <main
-                    class="popup__content modal__content_qr"
-                    id="promotionPensioners-content"
-                  >
+                  <main class="popup__content" id="promotionPensioners-content">
                     <div class="popup__text">
                       <p>
                         Данная акция рассчитана на поддержку пенсионеров в
@@ -550,6 +547,7 @@
                   </p>
                   <button
                     class="card__button button button_outline button_outline-light"
+                    data-micromodal-trigger="serviceWarranty"
                   >
                     Подробности
                   </button>
@@ -572,6 +570,7 @@
                   </p>
                   <button
                     class="card__button button button_outline button_outline-light"
+                    data-micromodal-trigger="serviceRepair"
                   >
                     Подробности
                   </button>
@@ -593,9 +592,256 @@
                   </p>
                   <button
                     class="card__button button button_outline button_outline-light"
+                    data-micromodal-trigger="serviceProcessing"
                   >
                     Подробности
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popups">
+          <div
+            class="popup micromodal-slide"
+            id="serviceWarranty"
+            aria-hidden="true"
+          >
+            <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+              <div class="popup__wrapper">
+                <div class="popup__container" role="dialog" aria-modal="true">
+                  <header class="popup__header">
+                    <div
+                      class="card card_popup"
+                      style="
+                        background-image: url('/src/img/services/processing.jpg');
+                      "
+                    >
+                      <div class="card__wrapper">
+                        <div class="badge badge_card">от 1 200 ₽</div>
+                        <div class="card__content">
+                          <h3 class="card__title">Санитарная обработка</h3>
+                          <div class="card__hidden">
+                            <p class="card__text">
+                              Распространяется на кулеры, приобретенных как у
+                              нас, так и в других фирмах.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="popup__close"
+                      aria-label="Close modal"
+                      data-micromodal-close
+                    >
+                      <i class="popup__close-icon icon-close"></i>
+                    </button>
+                    <button class="popup__share">
+                      <i class="popup__close-icon icon-share"></i>
+                    </button>
+                  </header>
+                  <main class="popup__content" id="serviceWarranty-content">
+                    <div class="popup__text">
+                      <p>
+                        Распространяется на кулеры, приобретенных как у нас, так
+                        и в других фирмах.
+                        <br /><br />
+                        Санитарная обработка, включающая в себя дезинфекцию,
+                        является необходимой процедурой для кулеров, находящихся
+                        в эксплуатации.
+                        <br /><br />
+                        Ее рекомендуется проводить не реже, чем один раз в 6
+                        месяцев (а зачастую и один раз в 3 месяца в зависимости
+                        от помещения, в котором кулер установлен, например, на
+                        складских помещениях, и интенсивности его
+                        использования), иначе ухудшается гигиеническое состояние
+                        кулера и, как следствие, качество питьевой воды.
+                        Основной причиной загрязнения кулеров можно назвать
+                        бактерии, в большинстве случаев не являющиеся
+                        патогенными.
+                        <br /><br />
+                        Однако попадая в кулер, они размножаются и ухудшают
+                        вкусовые качества воды. Результатом проведения
+                        санитарной обработки кулера является удаление
+                        минеральных отложений с внутренних частей аппарата,
+                        загрязнений органического происхождения в трубках и
+                        чистота внешних поверхностей корпуса.
+                      </p>
+                    </div>
+                    <button class="popup__order button">Заказать ремонт</button>
+                  </main>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="popup micromodal-slide"
+            id="serviceRepair"
+            aria-hidden="true"
+          >
+            <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+              <div class="popup__wrapper">
+                <div class="popup__container" role="dialog" aria-modal="true">
+                  <header class="popup__header">
+                    <div
+                      class="card card_popup"
+                      style="
+                        background-image: url('/src/img/services/repair.jpg');
+                      "
+                    >
+                      <div class="card__wrapper">
+                        <div class="badge badge_card">от 1 200 ₽</div>
+                        <div class="card__content">
+                          <h3 class="card__title">Ремонт кулеров</h3>
+                          <div class="card__hidden">
+                            <p class="card__text">
+                              Распространяется на кулеры, приобретенных как у
+                              нас, так и в других фирмах.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="popup__close"
+                      aria-label="Close modal"
+                      data-micromodal-close
+                    >
+                      <i class="popup__close-icon icon-close"></i>
+                    </button>
+                    <button class="popup__share">
+                      <i class="popup__close-icon icon-share"></i>
+                    </button>
+                  </header>
+                  <main class="popup__content" id="serviceRepair-content">
+                    <div class="popup__text">
+                      <p>
+                        Распространяется на кулеры, приобретенных как у нас, так
+                        и в других фирмах.
+                      </p>
+                      <br />
+                      <ul>
+                        <li>
+                          <b>Вывоз</b> ( + возврат кулера клиенту) 500 руб.
+                        </li>
+                        <li>
+                          <b>Общая диагностика</b> в мастерской 500 руб. / 700
+                          руб.
+                        </li>
+                        <li>
+                          <b>Дезинфекция</b>, полная санитарная обработка кулера
+                          в сервисном центре 1300 руб. / 1500 руб.
+                        </li>
+                      </ul>
+                      <br />
+                      <p>
+                        В случае поступления кулера на ремонт и явной
+                        необходимости санобработки и дезинфекции кулера либо по
+                        желанию клиента, предлагаем скидку на услугу сан
+                        обработки и дезинфекции - 15%.
+                      </p>
+                      <br />
+                      <p>
+                        Стоимость и сроки ремонта зависят от характера и
+                        сложности поломки. После тщательной дефектовки мы
+                        сообщим Вам стоимость необходимых ремонтных работ с
+                        учетом комплектующих. Получив Ваше согласие на ремонт,
+                        мы приступим к работе.
+                      </p>
+                      <br />
+                      <p>
+                        Оплата производится по факту выполнения работ за
+                        наличный или безналичный расчет. Цены указаны без НДС.
+                      </p>
+                    </div>
+                    <button class="popup__order button">Заказать ремонт</button>
+                  </main>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="popup micromodal-slide"
+            id="serviceProcessing"
+            aria-hidden="true"
+          >
+            <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+              <div class="popup__wrapper">
+                <div class="popup__container" role="dialog" aria-modal="true">
+                  <header class="popup__header">
+                    <div
+                      class="card card_dim card_popup"
+                      style="
+                        background-image: url('/src/img/services/service.jpg');
+                      "
+                    >
+                      <div class="card__wrapper">
+                        <div class="badge badge_card">Бесплатно</div>
+                        <div class="card__content">
+                          <h3 class="card__title">Гарантийное обслуживание</h3>
+                          <div class="card__hidden">
+                            <p class="card__text">
+                              Только для кулеров, приобретенных в нашей
+                              компании!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="popup__close"
+                      aria-label="Close modal"
+                      data-micromodal-close
+                    >
+                      <i class="popup__close-icon icon-close"></i>
+                    </button>
+                    <button class="popup__share">
+                      <i class="popup__close-icon icon-share"></i>
+                    </button>
+                  </header>
+                  <main class="popup__content" id="serviceProcessing-content">
+                    <div class="popup__text">
+                      <p>
+                        Только для кулеров, приобретенных в нашей компании!
+                        <br /><br />
+                        Гарантийное обслуживание включает в себя проведение
+                        бесплатного ремонта кулера, если поломка или
+                        обнаруженные дефекты были признаны виной производителя.
+                      </p>
+                      <br />
+                      <p>
+                        Гарантийное обслуживание предоставляется при наличии
+                        следующих документов:
+                      </p>
+                      <ul>
+                        <li>
+                          Гарантийный талон, обязательным атрибутом которого
+                          является синяя печать продавца и дата продажи
+                          оборудования;
+                        </li>
+                        <li>Упаковка от кулера;</li>
+                        <li>Паспорт на кулер.</li>
+                      </ul>
+                      <br />
+                      <p>
+                        В гарантийном обслуживании может быть отказано, если:
+                      </p>
+                      <ul>
+                        <li>
+                          Не соблюдена комплектность товара при его сдаче на
+                          ремонт;
+                        </li>
+                        <li>
+                          Кулер сломался по вине заказчика при некорректной
+                          эксплуатации;
+                        </li>
+                        <li>Есть наличие механических повреждений;</li>
+                        <li>Взломаны гарантийные пломбы.</li>
+                      </ul>
+                    </div>
+                    <button class="popup__order button">Заказать ремонт</button>
+                  </main>
                 </div>
               </div>
             </div>
