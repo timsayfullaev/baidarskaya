@@ -55,6 +55,22 @@
     max-width: 338px;
     height: 406px;
   }
+  &_popup {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+    .card__content {
+      transform: translateY(0);
+    }
+    .card__hidden {
+      opacity: 1;
+      visibility: visible;
+      max-height: 312px;
+    }
+  }
   &__wrapper {
     position: relative;
     display: flex;
