@@ -186,56 +186,83 @@ try {
   }
 } catch (error) {}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdowns = document.querySelectorAll(".city-dropdown");
-  const phoneLinks = document.querySelectorAll(".city-phone");
+const dropdowns = document.querySelectorAll(".city-dropdown");
+const phoneLinks = document.querySelectorAll(".city-phone");
 
-  const cityPhones = {
-    Севастополь: "+79787637762",
-    Симферополь: "+79781234567",
-    Евпатория: "+79787654321",
-  };
+const cityPhones = {
+  Севастополь: "+79787637762",
+  Симферополь: "+79781234567",
+  Евпатория: "+79787654321",
+};
 
-  function updateCity(city) {
-    dropdowns.forEach((dropdown) => {
-      const span = dropdown.querySelector(".city-name");
-      span.textContent = city;
-
-      dropdown.querySelectorAll(".dropdown__link").forEach((link) => {
-        link.classList.toggle(
-          "dropdown__link_active",
-          link.textContent === city
-        );
-      });
-    });
-
-    if (cityPhones[city]) {
-      phoneLinks.forEach((link) => {
-        // убираем лишние плюсы
-        const cleanNumber = cityPhones[city].replace(/\+/g, "");
-        link.href = `tel:+${cleanNumber}`;
-        link.textContent = `+${cleanNumber.replace(
-          /(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,
-          "$1 $2 $3-$4-$5"
-        )}`;
-      });
-    }
-
-    localStorage.setItem("selectedCity", city);
-  }
-
-  const savedCity = localStorage.getItem("selectedCity");
-  if (savedCity && cityPhones[savedCity]) {
-    updateCity(savedCity);
-  }
-
+function updateCity(city) {
   dropdowns.forEach((dropdown) => {
+    const span = dropdown.querySelector(".city-name");
+    span.textContent = city;
+
     dropdown.querySelectorAll(".dropdown__link").forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const city = link.textContent;
-        updateCity(city);
-      });
+      link.classList.toggle("dropdown__link_active", link.textContent === city);
+    });
+  });
+
+  if (cityPhones[city]) {
+    phoneLinks.forEach((link) => {
+      // убираем лишние плюсы
+      const cleanNumber = cityPhones[city].replace(/\+/g, "");
+      link.href = `tel:+${cleanNumber}`;
+      link.textContent = `+${cleanNumber.replace(
+        /(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,
+        "$1 $2 $3-$4-$5"
+      )}`;
+    });
+  }
+
+  localStorage.setItem("selectedCity", city);
+}
+
+const savedCity = localStorage.getItem("selectedCity");
+if (savedCity && cityPhones[savedCity]) {
+  updateCity(savedCity);
+}
+
+dropdowns.forEach((dropdown) => {
+  dropdown.querySelectorAll(".dropdown__link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const city = link.textContent;
+      updateCity(city);
     });
   });
 });
+
+try {
+  const quantities = document.querySelectorAll(".quantity");
+
+  quantities.forEach((quantity) => {
+    const input = quantity.querySelector(".quantity__number");
+    const btnMinus = quantity.querySelector(".quantity__button_minus");
+    const btnPlus = quantity.querySelector(".quantity__button_plus");
+
+    // Уменьшение
+    btnMinus.addEventListener("click", () => {
+      let currentValue = parseInt(input.value) || 1;
+      if (currentValue > 1) {
+        input.value = currentValue - 1;
+      }
+    });
+
+    // Увеличение
+    btnPlus.addEventListener("click", () => {
+      let currentValue = parseInt(input.value) || 1;
+      input.value = currentValue + 1;
+    });
+
+    // Ввод вручную
+    input.addEventListener("input", () => {
+      let value = parseInt(input.value);
+      if (isNaN(value) || value < 1) {
+        input.value = 1;
+      }
+    });
+  });
+} catch (error) {}
