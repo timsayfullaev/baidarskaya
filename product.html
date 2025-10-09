@@ -16,20 +16,27 @@
             <a href="#" class="header__link">Контакты</a>
           </nav>
           <div class="header__contacts">
-            <div class="dropdown">
+            <div class="dropdown city-dropdown">
               <button class="dropdown__button">
-                <i class="dropdown__icon icon-navigation"></i> г. Севастополь
+                <i class="dropdown__icon icon-navigation"></i>
+                <span>г. <span class="city-name">Севастополь</span></span>
               </button>
               <div class="dropdown__content">
-                <a href="#" class="dropdown__link">Севастополь</a>
-                <a href="#" class="dropdown__link">Симферополь</a>
-                <a href="#" class="dropdown__link">Евпатория</a>
+                <div class="dropdown__links">
+                  <a href="#" class="dropdown__link dropdown__link_active"
+                    >Севастополь</a
+                  >
+                  <a href="#" class="dropdown__link">Симферополь</a>
+                  <a href="#" class="dropdown__link">Евпатория</a>
+                </div>
               </div>
             </div>
-            <a href="tel:+79787637762" class="header__phone"
+            <a href="tel:+79787637762" class="header__phone city-phone"
               >+ 7 978 763-77-62</a
             >
-            <button class="header__call">Заказать звонок</button>
+            <button class="header__call" data-micromodal-trigger="callback">
+              Заказать звонок
+            </button>
           </div>
         </div>
         <div class="header__bottom">
@@ -52,10 +59,16 @@
             </nav>
           </div>
           <div class="header__buttons">
-            <button class="button button_icon button_outline">
+            <button
+              class="button button_icon button_outline"
+              data-micromodal-trigger="qr"
+            >
               <i class="button__icon icon-qr"></i> QR-код
             </button>
-            <button class="button button_icon button_outline">
+            <button
+              class="button button_icon button_outline"
+              data-micromodal-trigger="orderWater"
+            >
               <i class="button__icon icon-water"></i> Заказать воду
             </button>
           </div>
@@ -442,6 +455,694 @@
         </div>
       </div>
     </footer>
+
+    <div class="modals">
+      <div class="modal micromodal-slide" id="callback" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="callback-title">
+                Заказать обратный звонок
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="callback-content">
+              <p class="modal__text">
+                Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+                время.
+              </p>
+              <form action="#" class="modal__form form" id="formCallback">
+                <div class="form__group">
+                  <div class="input">
+                    <input
+                      type="text"
+                      name="callbackName"
+                      id="callbackName"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Ваше имя"
+                    />
+                    <label for="callbackName" class="input__label"
+                      >Ваше имя</label
+                    >
+                  </div>
+                  <div class="input">
+                    <input
+                      type="tel"
+                      name="callbackPhone"
+                      id="callbackPhone"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Номер телефона"
+                    />
+                    <label for="callbackPhone" class="input__label"
+                      >Номер телефона</label
+                    >
+                  </div>
+                  <div class="select">
+                    <select
+                      name="callbackMethod"
+                      id="callbackMethod"
+                      class="select__field"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Выберите способ связи
+                      </option>
+                      <option value="telegram">Telegram</option>
+                      <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <label for="callbackMethod" class="select__label"
+                      >Способ связи</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group form__group_action">
+                  <button class="button button_block">Отправить</button>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="callbackAgree"
+                      name="callbackAgree"
+                      class="checkbox__field"
+                      required
+                      checked
+                    />
+                    <label for="callbackAgree" class="checkbox__label">
+                      Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                      <a href="#" class="checkbox__link"
+                        >Условиями обработки персональных данных</a
+                      >
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal micromodal-slide"
+        id="callbackThanks"
+        aria-hidden="true"
+      >
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="callbackThanks-title">
+                Заказать обратный звонок
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main
+              class="modal__content modal__content_thanks"
+              id="callbackThanks-content"
+            >
+              <div class="modal__thanks">
+                <p class="modal__thanks-text">
+                  Спасибо! <br />
+                  Ваша заявка на обратный звонок успешно отправлена.
+                </p>
+                <img
+                  src="/src/img/success.svg"
+                  alt="success"
+                  class="modal__thanks-success"
+                />
+              </div>
+              <button
+                class="modal__button button button_block"
+                data-micromodal-close
+              >
+                Закрыть
+              </button>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="qr" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="qr-title">Оплата по QR-коду</h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content modal__content_qr" id="qr-content">
+              <p class="modal__text">
+                Вы можете оплатить заказ с помозью QR-кода.
+                <br /><br />
+                Покупатель считывает QR-код мобильным приложением своего банка,
+                проверяет сумму и подтверждает платеж.
+              </p>
+              <img src="/src/img/qr.jpg" alt="qr" class="modal__qr" />
+              <p class="modal__text modal__text_more">
+                Подробности просьба уточнять в разделе сайта
+                <a href="#">"Доставка и оплата"</a>.
+              </p>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="orderWater" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="orderWater-title">Заказать воду</h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="orderWater-content">
+              <p class="modal__text">
+                При первом заказе покупатель вносит залог за обменную тару в
+                размере: 500 рублей за каждую бутыль объемом 19 л.
+              </p>
+              <div class="modal__products">
+                <div class="modal__product">
+                  <img
+                    src="/src/img/bottles/bottle.png"
+                    alt="bottle"
+                    class="modal__product-image"
+                  />
+                  <div class="modal__product-wrapper">
+                    <h3 class="modal__product-name">Вода Байдарcкая 19л</h3>
+                    <div class="modal__product-inner">
+                      <div class="modal__product-price">250 ₽</div>
+                      <div class="quantity quantity_modal">
+                        <button class="quantity__button quantity__button_minus">
+                          <i class="quantity__icon icon-minus"></i>
+                        </button>
+                        <input
+                          type="number"
+                          class="quantity__number"
+                          value="1"
+                          min="1"
+                        />
+                        <button class="quantity__button quantity__button_plus">
+                          <i class="quantity__icon icon-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="modal__button button button_block">
+                Оформить заказ
+              </button>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="orderDelivery" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="orderDelivery-title">
+                Куда доставить?
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="orderDelivery-content">
+              <p class="modal__text">
+                Заказ на утренние районы(с 09:00 до 12:00) принимаются накануне
+                - за 1 день до желаемого дня доставки или ранее. Подробности
+              </p>
+              <form action="#" class="modal__form form" id="formOrderDelivery">
+                <div class="form__group">
+                  <div class="input">
+                    <input
+                      type="text"
+                      name="orderDeliveryName"
+                      id="orderDeliveryName"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Ваше имя"
+                    />
+                    <label for="orderDeliveryName" class="input__label"
+                      >Ваше имя</label
+                    >
+                  </div>
+                  <div class="input">
+                    <input
+                      type="tel"
+                      name="orderDeliveryPhone"
+                      id="orderDeliveryPhone"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Номер телефона"
+                    />
+                    <label for="orderDeliveryPhone" class="input__label"
+                      >Номер телефона</label
+                    >
+                  </div>
+                  <div class="select">
+                    <select
+                      name="orderDeliveryMethod"
+                      id="orderDeliveryMethod"
+                      class="select__field"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Выберите способ связи
+                      </option>
+                      <option value="telegram">Telegram</option>
+                      <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <label for="orderDeliveryMethod" class="select__label"
+                      >Способ связи</label
+                    >
+                  </div>
+                  <div class="select">
+                    <select
+                      name="orderDeliveryDistrict"
+                      id="orderDeliveryDistrict"
+                      class="select__field"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Выберите район доставки
+                      </option>
+                      <option value="balaklava">Балаклава</option>
+                      <option value="center">Центр</option>
+                      <option value="letchiki">Летчики</option>
+                      <option value="ostryakova">Острякова</option>
+                      <option value="kamishovaya">б. Камышовая</option>
+                      <option value="streletskaya">б. Стрелецкая</option>
+                      <option value="kazachja">б. Казачья</option>
+                      <option value="korabelnaya">Корабельная сторона</option>
+                    </select>
+                    <label for="orderDeliveryDistrict" class="select__label"
+                      >Район доставки</label
+                    >
+                  </div>
+                  <div class="input">
+                    <input
+                      type="text"
+                      name="orderDeliveryAddress"
+                      id="orderDeliveryAddress"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Улица, дом, кв"
+                    />
+                    <label for="orderDeliveryAddress" class="input__label"
+                      >Улица, дом, кв</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group form__group_action">
+                  <button class="button button_block">Заказать воду</button>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="orderDeliveryAgree"
+                      name="orderDeliveryAgree"
+                      class="checkbox__field"
+                      required
+                      checked
+                    />
+                    <label for="orderDeliveryAgree" class="checkbox__label">
+                      Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                      <a href="#" class="checkbox__link"
+                        >Условиями обработки персональных данных</a
+                      >
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="orderFormed" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="orderFormed-title">
+                Заказ сформирован
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="orderFormed-content">
+              <div class="modal__order">
+                <p class="modal__text">Спасибо ваша заявка принята!</p>
+                <div class="modal__order-structure">Ваш заказ:</div>
+                <div class="modal__order-table">
+                  <div class="modal__order-product">
+                    <div class="modal__order-name">Вода Байдары 19л</div>
+                    <div class="modal__order-quantity">10 шт.</div>
+                    <div class="modal__order-price">2 500 ₽</div>
+                  </div>
+                </div>
+                <div class="modal__order-calculation">
+                  <div class="modal__order-sum">Сумма:</div>
+                  <div class="modal__order-total">5 000 ₽</div>
+                </div>
+              </div>
+              <button
+                class="modal__button button button_block"
+                data-micromodal-close
+              >
+                Закрыть
+              </button>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="support" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="support-title">Остались вопросы?</h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="support-content">
+              <p class="modal__text">
+                Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+                время для консультации.
+              </p>
+              <form action="#" class="modal__form form" id="formSupport">
+                <div class="form__group">
+                  <div class="input">
+                    <input
+                      type="text"
+                      name="supportName"
+                      id="supportName"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Ваше имя"
+                    />
+                    <label for="supportName" class="input__label"
+                      >Ваше имя</label
+                    >
+                  </div>
+                  <div class="input">
+                    <input
+                      type="tel"
+                      name="supportPhone"
+                      id="supportPhone"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Номер телефона"
+                    />
+                    <label for="supportPhone" class="input__label"
+                      >Номер телефона</label
+                    >
+                  </div>
+                  <div class="select">
+                    <select
+                      name="supportMethod"
+                      id="supportMethod"
+                      class="select__field"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Выберите способ связи
+                      </option>
+                      <option value="telegram">Telegram</option>
+                      <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <label for="supportMethod" class="select__label"
+                      >Способ связи</label
+                    >
+                  </div>
+                  <div class="input">
+                    <textarea
+                      name="supportMessage"
+                      id="supportMessage"
+                      class="input__field input__field_textarea"
+                      placeholder="Ваше сообщение"
+                    ></textarea>
+                    <label
+                      for="supportMessage"
+                      class="input__label input__label_textarea"
+                      >Ваше сообщение</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group form__group_action">
+                  <button class="button button_block">Отправить</button>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="supportAgree"
+                      name="supportAgree"
+                      class="checkbox__field"
+                      required
+                      checked
+                    />
+                    <label for="supportAgree" class="checkbox__label">
+                      Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                      <a href="#" class="checkbox__link"
+                        >Условиями обработки персональных данных</a
+                      >
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="supportThanks" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="supportThanks-title">
+                Остались вопросы?
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main
+              class="modal__content modal__content_thanks"
+              id="supportThanks-content"
+            >
+              <div class="modal__thanks">
+                <p class="modal__thanks-text">
+                  Спасибо! <br />
+                  Ваша заявка на обратный звонок успешно отправлена.
+                </p>
+                <img
+                  src="/src/img/success.svg"
+                  alt="success"
+                  class="modal__thanks-success"
+                />
+              </div>
+              <button
+                class="modal__button button button_block"
+                data-micromodal-close
+              >
+                Закрыть
+              </button>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="contact" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="contact-title">Связаться с нами</h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main class="modal__content" id="contact-content">
+              <p class="modal__text">
+                Укажите ваши контактные данные и мы свяжемся с Вами в ближайшее
+                время для консультации.
+              </p>
+              <form action="#" class="modal__form form" id="formContact">
+                <div class="form__group">
+                  <div class="input">
+                    <input
+                      type="text"
+                      name="contactName"
+                      id="contactName"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Ваше имя"
+                    />
+                    <label for="contactName" class="input__label"
+                      >Ваше имя</label
+                    >
+                  </div>
+                  <div class="input">
+                    <input
+                      type="tel"
+                      name="contactPhone"
+                      id="contactPhone"
+                      class="input__field"
+                      autocomplete="off"
+                      required
+                      placeholder="Номер телефона"
+                    />
+                    <label for="contactPhone" class="input__label"
+                      >Номер телефона</label
+                    >
+                  </div>
+                  <div class="select">
+                    <select
+                      name="contactMethod"
+                      id="contactMethod"
+                      class="select__field"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Выберите способ связи
+                      </option>
+                      <option value="telegram">Telegram</option>
+                      <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <label for="contactMethod" class="select__label"
+                      >Способ связи</label
+                    >
+                  </div>
+                  <div class="input">
+                    <textarea
+                      name="contactMessage"
+                      id="contactMessage"
+                      class="input__field input__field_textarea"
+                      placeholder="Ваше сообщение"
+                    ></textarea>
+                    <label
+                      for="contactMessage"
+                      class="input__label input__label_textarea"
+                      >Ваше сообщение</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group form__group_action">
+                  <button class="button button_block">Отправить</button>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="contactAgree"
+                      name="contactAgree"
+                      class="checkbox__field"
+                      required
+                      checked
+                    />
+                    <label for="contactAgree" class="checkbox__label">
+                      Нажимая кнопку “Заказать воду”, вы соглашаетесь с
+                      <a href="#" class="checkbox__link"
+                        >Условиями обработки персональных данных</a
+                      >
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="contactThanks" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+              <h2 class="modal__title" id="contactThanks-title">
+                Связаться с нами
+              </h2>
+              <button
+                class="modal__close"
+                aria-label="Close modal"
+                data-micromodal-close
+              >
+                <i class="modal__close-icon icon-close"></i>
+              </button>
+            </header>
+            <main
+              class="modal__content modal__content_thanks"
+              id="contactThanks-content"
+            >
+              <div class="modal__thanks">
+                <p class="modal__thanks-text">
+                  Спасибо! <br />
+                  Ваша заявка на обратный звонок успешно отправлена.
+                </p>
+                <img
+                  src="/src/img/success.svg"
+                  alt="success"
+                  class="modal__thanks-success"
+                />
+              </div>
+              <button
+                class="modal__button button button_block"
+                data-micromodal-close
+              >
+                Закрыть
+              </button>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/js/script.js"></script>
   </body>
 </html>
