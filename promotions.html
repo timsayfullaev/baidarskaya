@@ -112,6 +112,7 @@
                       </p>
                       <button
                         class="card__button button button_outline button_outline-light"
+                        data-micromodal-trigger="promotionOrganizations"
                       >
                         Подробности
                       </button>
@@ -137,6 +138,7 @@
                       </p>
                       <button
                         class="card__button button button_outline button_outline-light"
+                        data-micromodal-trigger="promotionPensioners"
                       >
                         Подробности
                       </button>
@@ -162,6 +164,7 @@
                       </p>
                       <button
                         class="card__button button button_outline button_outline-light"
+                        data-micromodal-trigger="promotionPensioners"
                       >
                         Подробности
                       </button>
@@ -188,9 +191,164 @@
                       </p>
                       <button
                         class="card__button button button_outline button_outline-light"
+                        data-micromodal-trigger="promotionOrganizations"
                       >
                         Подробности
                       </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popups">
+              <div
+                class="popup micromodal-slide"
+                id="promotionOrganizations"
+                aria-hidden="true"
+              >
+                <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+                  <div class="popup__wrapper">
+                    <div
+                      class="popup__container"
+                      role="dialog"
+                      aria-modal="true"
+                    >
+                      <header class="popup__header">
+                        <div
+                          class="card card_popup"
+                          style="
+                            background-image: url('/src/img/promotions/organizations.jpg');
+                          "
+                        >
+                          <div class="card__wrapper">
+                            <div class="badge badge_card">-10%</div>
+                            <div class="card__content">
+                              <div class="card__period">Весь август</div>
+                              <h3 class="card__title">Организациям</h3>
+                              <div class="card__hidden">
+                                <p class="card__text">
+                                  Скидка организациям в сфере здоровья и
+                                  красоты: фитнесс клубам, медицинским центрам,
+                                  салонам красоты, спа-салонам.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          class="popup__close"
+                          aria-label="Close modal"
+                          data-micromodal-close
+                        >
+                          <i class="popup__close-icon icon-close"></i>
+                        </button>
+                        <button class="popup__share">
+                          <i class="popup__close-icon icon-share"></i>
+                        </button>
+                      </header>
+                      <main
+                        class="popup__content"
+                        id="promotionOrganizations-content"
+                      >
+                        <div class="popup__text">
+                          <p>
+                            Наше сердце на 80% состоит из воды. Мы хотим
+                            поддержать сердца, стремящиеся к красоте и здоровью.
+                          </p>
+                          <br />
+                          <p>Мы предлагаем скидку:</p>
+                          <ul>
+                            <li>спорт клубам / фитнес центрам</li>
+                            <li>салонам красоты</li>
+                            <li>медицинским центрам</li>
+                          </ul>
+                          <br />
+                          <p>
+                            Доставим воду по цене 205 руб/1 бут. Минимальный
+                            заказ – 1 бут. <br />
+                            Важно: при первом заказе воды необходимо внести
+                            залог за бутыль или предо
+                          </p>
+                        </div>
+                        <button
+                          class="popup__promocode button button_icon button_outline button_promocode"
+                          data-code="FEGE8232"
+                        >
+                          FEGE8232
+                          <i class="button__icon icon-copy"></i>
+                        </button>
+                      </main>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="popup micromodal-slide"
+                id="promotionPensioners"
+                aria-hidden="true"
+              >
+                <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+                  <div class="popup__wrapper">
+                    <div
+                      class="popup__container"
+                      role="dialog"
+                      aria-modal="true"
+                    >
+                      <header class="popup__header">
+                        <div
+                          class="card card_popup"
+                          style="
+                            background-image: url('/src/img/promotions/pensioners.jpg');
+                          "
+                        >
+                          <div class="card__wrapper">
+                            <div class="badge badge_card">Помпа в подарок</div>
+                            <div class="card__content">
+                              <div class="card__period">Бессрочная акция</div>
+                              <h3 class="card__title">Пенсионерам</h3>
+                              <div class="card__hidden">
+                                <p class="card__text">
+                                  При первом заказе МЕХАНИЧЕСКАЯ ПОМПА В ПОДАРОК
+                                  при предъявлении пенсионного удостоверения.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          class="popup__close"
+                          aria-label="Close modal"
+                          data-micromodal-close
+                        >
+                          <i class="popup__close-icon icon-close"></i>
+                        </button>
+                        <button class="popup__share">
+                          <i class="popup__close-icon icon-share"></i>
+                        </button>
+                      </header>
+                      <main
+                        class="popup__content"
+                        id="promotionPensioners-content"
+                      >
+                        <div class="popup__text">
+                          <p>
+                            Данная акция рассчитана на поддержку пенсионеров в
+                            настоящее трудное время. При первом заказе
+                            МЕХАНИЧЕСКАЯ ПОМПА В ПОДАРОК при предъявлении
+                            пенсионного удостоверения. Заказ от 1-го бутыля.
+                            <br /><br />
+                            Важно: при первом заказе воды необходимо внести
+                            залог за бутыль.
+                          </p>
+                        </div>
+                        <button
+                          class="popup__promocode button button_icon button_outline button_promocode"
+                          data-code="FEGE8232"
+                        >
+                          FEGE8232
+                          <i class="button__icon icon-copy"></i>
+                        </button>
+                      </main>
                     </div>
                   </div>
                 </div>

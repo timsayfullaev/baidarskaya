@@ -44,6 +44,11 @@
     transform: translateY(-9px);
     transition: all 0.3s ease-out;
     padding-top: 9px;
+    z-index: 1;
+    &_sort {
+      right: 0;
+      width: max-content;
+    }
   }
   &__links {
     border: 1px solid $blue-300;

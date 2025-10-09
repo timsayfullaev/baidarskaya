@@ -266,3 +266,29 @@ try {
     });
   });
 } catch (error) {}
+
+try {
+  const promoButtons = document.querySelectorAll(".button_promocode");
+
+  promoButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const code = button.dataset.code;
+
+      // Копирование через временный input
+      const tempInput = document.createElement("input");
+      tempInput.value = code;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Показываем надпись "Скопировано!"
+      button.classList.add("copied");
+
+      // Убираем через 2 секунды
+      setTimeout(() => {
+        button.classList.remove("copied");
+      }, 2000);
+    });
+  });
+} catch (error) {}

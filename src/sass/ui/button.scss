@@ -71,4 +71,25 @@
   &_block {
     width: 100%;
   }
+  &_promocode {
+    position: relative;
+    &:after {
+      content: "Скопировано!";
+      position: absolute;
+      right: calc(-48px - 60px);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.25s;
+      color: $blue-800;
+      font-size: 14px;
+      font-weight: 500;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    &.copied::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
