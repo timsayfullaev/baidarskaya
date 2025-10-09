@@ -281,21 +281,29 @@
           /></a>
           <div class="footer__contacts">
             <div class="footer__location">
-              <div class="dropdown dropdown_light">
+              <div class="dropdown dropdown_light city-dropdown">
                 <button class="dropdown__button">
-                  <i class="dropdown__icon icon-navigation"></i> г. Севастополь
+                  <i class="dropdown__icon icon-navigation"></i>
+                  <span>г. <span class="city-name">Севастополь</span></span>
                 </button>
                 <div class="dropdown__content">
-                  <a href="#" class="dropdown__link">Севастополь</a>
-                  <a href="#" class="dropdown__link">Симферополь</a>
-                  <a href="#" class="dropdown__link">Евпатория</a>
+                  <div class="dropdown__links">
+                    <a href="#" class="dropdown__link dropdown__link_active"
+                      >Севастополь</a
+                    >
+                    <a href="#" class="dropdown__link">Симферополь</a>
+                    <a href="#" class="dropdown__link">Евпатория</a>
+                  </div>
                 </div>
               </div>
-              <a href="tel:+79787637762" class="footer__phone"
+              <a href="tel:+79787637762" class="footer__phone city-phone"
                 >+ 7 978 763-77-62</a
               >
             </div>
-            <button class="button button_outline button_outline-footer">
+            <button
+              class="button button_outline button_outline-footer"
+              data-micromodal-trigger="callback"
+            >
               Заказать звонок
             </button>
           </div>
