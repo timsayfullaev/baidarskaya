@@ -78,6 +78,9 @@
         }
       }
     }
+    &_grow {
+      flex-grow: 1;
+    }
   }
   &__qr {
     border: 1px solid $blue-400;
@@ -184,6 +187,23 @@
       font-weight: 500;
       font-size: 24px;
       color: $black-700;
+    }
+  }
+  &__more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    &-link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      color: $black-600;
+      transition: all 0.25s;
+      &:hover {
+        color: $blue-800;
+      }
     }
   }
 }
