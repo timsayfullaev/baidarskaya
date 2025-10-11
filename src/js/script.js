@@ -292,3 +292,24 @@ try {
     });
   });
 } catch (error) {}
+
+try {
+  const tabs = document.querySelectorAll(".tabs"); // вдруг у тебя несколько блоков табов на странице
+
+  tabs.forEach((tab) => {
+    const buttons = tab.querySelectorAll(".tabs__button");
+    const contents = tab.querySelectorAll(".tabs__content");
+
+    buttons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        // сбрасываем активные состояния
+        buttons.forEach((b) => b.classList.remove("tabs__button_active"));
+        contents.forEach((c) => c.classList.remove("tabs__content_active"));
+
+        // активируем нужные
+        btn.classList.add("tabs__button_active");
+        contents[index].classList.add("tabs__content_active");
+      });
+    });
+  });
+} catch (error) {}
