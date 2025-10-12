@@ -1,4 +1,5 @@
 @use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
 
 .header {
   border-bottom: 1px solid $blue-400;
@@ -174,6 +175,149 @@
         span {
           display: none;
         }
+      }
+    }
+  }
+  &__order {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__hamburger {
+    display: none;
+    @media (max-width: 992px) {
+      display: flex;
+    }
+  }
+  &-mobile {
+    position: fixed;
+    background: $white;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 50%;
+    z-index: 3;
+    padding: 40px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-out;
+    overflow-y: auto;
+    @media (max-width: 768px) {
+      width: 75%;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+    &_active {
+      right: 0;
+    }
+    &__close {
+      border: none;
+      padding: 0;
+      background: none;
+      font-size: 24px;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+    &__contacts {
+      display: flex;
+      align-items: end;
+      column-gap: 52px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+    }
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+    &__phone {
+      font-weight: 600;
+      font-size: 18px;
+      color: $black-700;
+      text-decoration: none;
+    }
+    &__call {
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: underline;
+      color: $black-700;
+      border: none;
+      padding: 0;
+      background: none;
+    }
+    &__buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    &__menu {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      &-link {
+        font-weight: 500;
+        font-size: 16px;
+        color: $black-700;
+        text-decoration: none;
+      }
+    }
+    &__hr {
+      border: 1px solid $blue-400;
+      margin: 0;
+    }
+    &__social {
+      display: flex;
+      column-gap: 12px;
+      margin-top: 32px;
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 52px;
+        height: 52px;
+        background: $blue-800;
+        color: $white;
+        transition: all 0.25s;
+        &:hover {
+          background: $white;
+          color: $blue-800;
+        }
+        &:active {
+          background: #e5e5e5;
+        }
+      }
+      &-icon {
+        font-size: 24px;
+      }
+    }
+    &__overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      @include overlay-black;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-out;
+      pointer-events: none;
+
+      &_active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
     }
   }

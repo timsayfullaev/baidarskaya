@@ -313,3 +313,24 @@ try {
     });
   });
 } catch (error) {}
+
+const hamburger = document.querySelector(".header__hamburger");
+const offScreenMenu = document.querySelector(".header-mobile");
+const offScreenMenuClose = document.querySelector(".header-mobile__close");
+const overlay = document.querySelector(".header-mobile__overlay");
+
+function openMenu() {
+  offScreenMenu.classList.add("header-mobile_active");
+  overlay.classList.add("header-mobile__overlay_active");
+  document.body.classList.add("no-scroll");
+}
+
+function closeMenu() {
+  offScreenMenu.classList.remove("header-mobile_active");
+  overlay.classList.remove("header-mobile__overlay_active");
+  document.body.classList.remove("no-scroll");
+}
+
+hamburger.addEventListener("click", openMenu);
+offScreenMenuClose.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
