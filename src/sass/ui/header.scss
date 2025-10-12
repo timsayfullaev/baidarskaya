@@ -17,8 +17,8 @@
         color: $white;
       }
     }
-    .dropdown {
-      &__button {
+    .header__city {
+      .dropdown__button {
         color: $white;
       }
     }
@@ -45,17 +45,20 @@
         color: $white;
       }
     }
-    .button {
-      &_outline {
-        border-color: $white;
-        color: $white;
-        &:hover {
-          border-color: $blue-800;
-        }
-        &:active {
-          border-color: #0065cc;
-        }
+    .header__qr,
+    .header__order {
+      border-color: $white;
+      color: $white;
+      &:hover {
+        border-color: $blue-800;
       }
+      &:active {
+        border-color: #0065cc;
+      }
+    }
+    .header__hamburger {
+      background: none;
+      border-color: $white;
     }
   }
   &__top {
@@ -269,6 +272,9 @@
         font-size: 16px;
         color: $black-700;
         text-decoration: none;
+        &_active {
+          color: $blue-800;
+        }
       }
     }
     &__hr {

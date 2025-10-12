@@ -16,7 +16,7 @@
             <a href="#" class="header__link">Контакты</a>
           </nav>
           <div class="header__contacts">
-            <div class="dropdown city-dropdown">
+            <div class="header__city dropdown city-dropdown">
               <button class="dropdown__button">
                 <i class="dropdown__icon icon-navigation"></i>
                 <span>г. <span class="city-name">Севастополь</span></span>
@@ -60,19 +60,106 @@
           </div>
           <div class="header__buttons">
             <button
-              class="button button_icon button_outline"
+              class="header__qr button button_icon button_outline"
               data-micromodal-trigger="qr"
             >
-              <i class="button__icon icon-qr"></i> QR-код
+              <i class="button__icon icon-qr"></i> <span>QR-код</span>
             </button>
             <button
-              class="button button_icon button_outline"
+              class="header__order button button_icon button_outline"
               data-micromodal-trigger="orderWater"
             >
-              <i class="button__icon icon-water"></i> Заказать воду
+              <i class="button__icon icon-water"></i> <span>Заказать воду</span>
+            </button>
+            <button class="header__hamburger button button_icon">
+              <i class="button__icon icon-menu"></i>
             </button>
           </div>
         </div>
+         <div class="header-mobile">
+          <button class="header-mobile__close"><i class="icon-close"></i></button>
+          <div class="header-mobile__top">
+            <div class="header-mobile__contacts">
+              <div class="header-mobile__contact">
+                <div class="dropdown city-dropdown">
+                  <button class="dropdown__button">
+                    <i class="dropdown__icon icon-navigation"></i>
+                    <span>г. <span class="city-name">Севастополь</span></span>
+                  </button>
+                  <div class="dropdown__content">
+                    <div class="dropdown__links">
+                      <a href="#" class="dropdown__link dropdown__link_active"
+                        >Севастополь</a
+                      >
+                      <a href="#" class="dropdown__link">Симферополь</a>
+                      <a href="#" class="dropdown__link">Евпатория</a>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="tel:+79787637762"
+                  class="header-mobile__phone city-phone"
+                  >+ 7 978 763-77-62</a
+                >
+              </div>
+              <button
+                class="header-mobile__call"
+                data-micromodal-trigger="callback"
+              >
+                Заказать звонок
+              </button>
+            </div>
+            <div class="header-mobile__buttons">
+              <button
+                class="button button_icon button_outline"
+                data-micromodal-trigger="qr"
+              >
+                <i class="button__icon icon-qr"></i> <span>QR-код</span>
+              </button>
+              <button
+                class="button button_icon button_outline"
+                data-micromodal-trigger="orderWater"
+              >
+                <i class="button__icon icon-water"></i>
+                <span>Заказать воду</span>
+              </button>
+            </div>
+            <div class="header-mobile__menu">
+              <nav class="header-mobile__nav">
+                <a href="#" class="header-mobile__nav-link header-mobile__nav-link_active">Каталог</a>
+                <a href="#" class="header-mobile__nav-link">Акции</a>
+                <a href="#" class="header-mobile__nav-link">Услуги</a>
+                <a href="#" class="header-mobile__nav-link"
+                  >Доставка и оплата</a
+                >
+              </nav>
+              <hr class="header-mobile__hr"></hr>
+              <nav class="header-mobile__nav">
+                <a href="#" class="header-mobile__nav-link">О воде</a>
+                <a href="#" class="header-mobile__nav-link">О производстве</a>
+                <a href="#" class="header-mobile__nav-link">Вопрос-ответ</a>
+                <a href="#" class="header-mobile__nav-link">Контакты</a>
+              </nav>
+            </div>
+          </div>
+          <div class="heder-mobile__bottom">
+            <div class="header-mobile__social">
+              <a href="#" target="_blank" class="header-mobile__social-link">
+                <i class="header-mobile__social-icon icon-tg"></i>
+              </a>
+              <a href="#" target="_blank" class="header-mobile__social-link">
+                <i class="header-mobile__social-icon icon-zen"></i>
+              </a>
+              <a href="#" target="_blank" class="header-mobile__social-link">
+                <i class="header-mobile__social-icon icon-vk"></i>
+              </a>
+              <a href="#" target="_blank" class="header-mobile__social-link">
+                <i class="header-mobile__social-icon icon-yt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header-mobile__overlay"></div>
       </div>
     </header>
 
