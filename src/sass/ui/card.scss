@@ -33,17 +33,31 @@
   &:hover {
     &::before {
       opacity: 0;
+      @media (max-width: 768px) {
+        opacity: 1;
+      }
     }
     &::after {
       opacity: 1;
+      @media (max-width: 768px) {
+        opacity: 0;
+      }
     }
     .card__content {
       transform: translateY(0);
+      @media (max-width: 768px) {
+        transform: translateY(16px);
+      }
     }
     .card__hidden {
       opacity: 1;
       visibility: visible;
       max-height: 312px;
+      @media (max-width: 768px) {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+      }
     }
   }
   &_dim {
@@ -55,7 +69,8 @@
     max-width: 338px;
     height: 406px;
   }
-  &_popup {
+  &_popup,
+  &_popup:hover {
     &::before {
       opacity: 0;
     }
@@ -94,6 +109,9 @@
     font-size: 32px;
     color: $white;
     margin-top: 4px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
   &__hidden {
     margin-top: 16px;
@@ -111,5 +129,17 @@
   }
   &__button {
     margin-top: 16px;
+  }
+  &__trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 }

@@ -1,8 +1,38 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .promotions {
+  @media (max-width: 992px) {
+    overflow: hidden;
+  }
   &__slider {
     margin-top: 40px;
+    @media (max-width: 992px) {
+      overflow: visible;
+      .swiper-slide {
+        width: 540px;
+        .card {
+          min-height: 280px;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      margin-top: 24px;
+      .swiper-slide {
+        width: 360px;
+        .card {
+          min-height: 240px;
+        }
+      }
+    }
+    @media (max-width: 576px) {
+      .swiper-slide {
+        width: 248px;
+        .card {
+          min-height: 177px;
+          padding: 12px;
+        }
+      }
+    }
   }
   &__navigation {
     margin-top: 24px;

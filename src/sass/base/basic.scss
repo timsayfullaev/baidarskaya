@@ -46,10 +46,7 @@ strong {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
-  &_full-height {
-    min-height: 100vh;
-    position: relative;
-  }
+  position: relative;
   @media (max-width: 1400px) {
     max-width: 1140px;
   }

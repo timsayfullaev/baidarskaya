@@ -43,9 +43,14 @@ try {
     pagination: {
       el: ".promotions__pagination",
     },
-    slidesPerView: 2,
+    slidesPerView: "auto",
     spaceBetween: 16,
     grabCursor: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+    },
   });
 } catch (error) {}
 
