@@ -79,6 +79,9 @@
     }
     .card__content {
       transform: translateY(0);
+      @media (max-width: 576px) {
+        padding-right: 36px;
+      }
     }
     .card__hidden {
       opacity: 1;
