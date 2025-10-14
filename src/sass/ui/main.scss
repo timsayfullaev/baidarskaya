@@ -96,5 +96,8 @@
     font-size: 14px;
     color: $black-700;
     margin-top: 40px;
+    @media (max-width: 576px) {
+      margin-top: 24px;
+    }
   }
 }

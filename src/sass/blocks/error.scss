@@ -6,6 +6,9 @@
   align-items: center;
   padding: 240px 0 160px 0;
   position: relative;
+  @media (max-width: 576px) {
+    padding-top: 160px;
+  }
   &:before {
     content: "404";
     font-weight: 800;
@@ -15,6 +18,22 @@
     position: absolute;
     top: 0;
     z-index: -1;
+    @media (max-width: 1400px) {
+      font-size: 578px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 482px;
+    }
+    @media (max-width: 992px) {
+      font-size: 356px;
+    }
+    @media (max-width: 768px) {
+      font-size: 262px;
+    }
+    @media (max-width: 576px) {
+      font-size: 210px;
+      padding-top: 50px;
+    }
   }
   &__text {
     font-weight: 400;
@@ -28,6 +47,10 @@
     line-height: 120%;
     color: $black-700;
     margin-top: 8px;
+    text-align: center;
+    @media (max-width: 576px) {
+      font-size: 32px;
+    }
   }
   &__button {
     margin-top: 32px;

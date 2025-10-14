@@ -14,4 +14,9 @@
       grid-template-columns: 1fr;
     }
   }
+  &_error {
+    @media (max-width: 576px) {
+      overflow: hidden;
+    }
+  }
 }
