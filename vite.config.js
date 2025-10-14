@@ -53,5 +53,5 @@ export default defineConfig({
       },
     }),
   ],
-  // base: "/baidarskaya/dist/",
+  base: "/baidarskaya/dist/",
 });
