@@ -1,9 +1,15 @@
 .page {
   margin-top: 40px;
+  @media (max-width: 576px) {
+    margin-top: 24px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: 338px auto;
     column-gap: 32px;
+    @media (max-width: 1200px) {
+      grid-template-columns: 303px auto;
+    }
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
     }

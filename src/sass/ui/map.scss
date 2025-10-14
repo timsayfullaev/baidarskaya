@@ -16,6 +16,9 @@
     }
     &_schedule {
       height: 500px;
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
   }
   &__locations {

@@ -2,12 +2,17 @@
 
 .main {
   margin-top: 40px;
+  @media (max-width: 576px) {
+    margin-top: 24px;
+  }
   &__services,
   &__promotions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-top: 40px;
+  }
+  &__services {
     @media (max-width: 992px) {
       .card {
         &:nth-child(3) {
@@ -31,8 +36,48 @@
       }
     }
   }
+  &__promotions {
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+      .card {
+        min-height: 240px;
+      }
+    }
+    @media (max-width: 576px) {
+      margin-top: 24px;
+      .card {
+        padding: 12px;
+      }
+    }
+  }
   &__faq {
     margin-top: 40px;
+    .card_support {
+      min-width: 100%;
+      margin-top: 80px;
+      display: none;
+    }
+    @media (max-width: 576px) {
+      margin-top: 24px;
+      .card_support {
+        display: flex;
+        &::before {
+          opacity: 1;
+        }
+        .card__content {
+          transform: translateY(0);
+          @media (max-width: 576px) {
+            padding-right: 36px;
+          }
+        }
+        .card__hidden {
+          opacity: 1;
+          visibility: visible;
+          max-height: 312px;
+        }
+      }
+    }
   }
   &__text {
     font-weight: 400;

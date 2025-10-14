@@ -68,6 +68,9 @@
   &_support {
     max-width: 338px;
     height: 406px;
+    .card__title {
+      width: 232px;
+    }
   }
   &_popup,
   &_popup:hover {

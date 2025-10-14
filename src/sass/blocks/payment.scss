@@ -6,18 +6,44 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px 16px;
   align-items: start;
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
   &__block {
     border: 1px solid $blue-400;
     border-radius: 24px;
     padding: 24px;
     &_qr {
       grid-column: 1 / 4;
+      @media (max-width: 1400px) {
+        grid-column: 1 / 3;
+      }
+      @media (max-width: 768px) {
+        grid-column: auto;
+      }
+    }
+    &_order {
+      @media (max-width: 1400px) {
+        grid-column: 1 / 3;
+      }
+      @media (max-width: 768px) {
+        grid-column: auto;
+      }
     }
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     column-gap: 16px;
+    @media (max-width: 576px) {
+      flex-direction: column;
+      row-gap: 16px;
+      align-items: center;
+    }
   }
   &__title {
     font-weight: 500;
@@ -41,6 +67,11 @@
     display: flex;
     column-gap: 32px;
     margin-top: 24px;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
   }
   &__link {
     font-weight: 500;
@@ -64,6 +95,14 @@
     min-height: 372px;
     border: 1px solid $blue-400;
     border-radius: 20px;
+    @media (max-width: 1400px) {
+      min-width: 288px;
+      min-height: 288px;
+    }
+    @media (max-width: 1200px) {
+      min-width: 241px;
+      min-height: 241px;
+    }
   }
   &__button {
     margin-top: 16px;
