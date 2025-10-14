@@ -86,6 +86,10 @@
     color: $black-600;
     padding: 0 24px;
     margin-top: 40px;
+    @media (max-width: 576px) {
+      padding: 0;
+      margin-top: 24px;
+    }
   }
   &__policy {
     font-weight: 400;

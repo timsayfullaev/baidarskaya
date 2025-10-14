@@ -5,6 +5,10 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 16px;
   margin-top: 40px;
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
   &__block {
     border-radius: 16px;
     padding: 24px;
@@ -39,8 +43,23 @@
   &__logos {
     display: flex;
     align-items: center;
-    column-gap: 54px;
     margin-top: 24px;
+    justify-content: space-between;
+    @media (max-width: 1400px) {
+      .specs__logo {
+        height: 48px;
+      }
+    }
+    @media (max-width: 1200px) {
+      .specs__logo {
+        height: 64px;
+      }
+    }
+    @media (max-width: 576px) {
+      .specs__logo {
+        height: 42px;
+      }
+    }
   }
   &__links {
     display: flex;
