@@ -8,6 +8,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-top: 40px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+    @media (max-width: 576px) {
+      margin-top: 24px;
+    }
   }
   &__faq {
     margin-top: 40px;
