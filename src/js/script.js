@@ -81,16 +81,20 @@ try {
 
 try {
   const thumbsSwiper = new Swiper(".product__thumbnails", {
-    direction: "vertical",
     spaceBetween: 12,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      768: {
+        direction: "vertical",
+      },
+    },
   });
   const swiper = new Swiper(".product__slider", {
     modules: [Thumbs, EffectFade],
     spaceBetween: 12,
-    effect: "fade",
+    // effect: "fade",
     thumbs: {
       swiper: thumbsSwiper,
     },
@@ -103,8 +107,19 @@ try {
     pagination: {
       el: ".related__pagination",
     },
-    slidesPerView: 4,
+    slidesPerView: 2,
+    spaceBetween: 16,
     grabCursor: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1400: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
   });
 } catch (error) {}
 

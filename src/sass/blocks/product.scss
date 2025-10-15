@@ -7,14 +7,26 @@
     column-gap: 16px;
     margin-top: 32px;
     align-items: start;
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      margin-top: 24px;
+      row-gap: 24px;
+    }
   }
   &__images {
     display: flex;
     column-gap: 16px;
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
   }
   &__thumbnails {
     min-width: 102px;
     max-height: 477px;
+    @media (max-width: 576px) {
+      min-height: 102px;
+      max-width: 477px;
+    }
     .swiper-slide {
       cursor: pointer;
     }

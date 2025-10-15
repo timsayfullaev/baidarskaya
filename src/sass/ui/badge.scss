@@ -24,6 +24,10 @@
     top: 20px;
     left: 20px;
     z-index: 1;
+    @media (max-width: 576px) {
+      top: 12px;
+      left: 12px;
+    }
   }
   &_filter {
     background: none;

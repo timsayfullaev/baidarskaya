@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    flex-wrap: wrap;
   }
   &__item {
     font-weight: 400;
@@ -15,11 +16,14 @@
     display: flex;
     align-items: end;
     column-gap: 10px;
-    & + li::before {
+    &::after {
       font-family: "fontello";
       content: "\e803";
       font-size: 12px;
       color: $black-800;
+    }
+    &:last-child::after {
+      display: none;
     }
   }
   &__link {
