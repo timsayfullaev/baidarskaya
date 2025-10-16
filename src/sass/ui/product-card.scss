@@ -6,6 +6,9 @@
   @media (max-width: 1200px) {
     height: 426px;
   }
+  @media (max-width: 992px) {
+    height: 450px;
+  }
   @media (max-width: 768px) {
     height: auto;
   }
@@ -16,6 +19,9 @@
       height: 530px;
       @media (max-width: 1200px) {
         height: 488px;
+      }
+      @media (max-width: 992px) {
+        height: 528px;
       }
     }
     .product-card__button {
@@ -42,6 +48,7 @@
       max-width: 315px;
     }
     @media (max-width: 992px) {
+      height: 450px;
       max-width: 354px;
     }
     @media (max-width: 768px) {
