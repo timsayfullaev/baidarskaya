@@ -7,52 +7,77 @@
     column-gap: 16px;
     margin-top: 32px;
     align-items: start;
-    @media (max-width: 576px) {
-      grid-template-columns: 1fr;
-      margin-top: 24px;
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
       row-gap: 24px;
     }
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      margin-top: 24px;
+    }
   }
-  &__images {
-    display: flex;
+  &__gallery {
+    display: grid;
+    grid-template: 477px / 102px 456px;
     column-gap: 16px;
-    @media (max-width: 576px) {
-      flex-direction: column;
+    @media (max-width: 768px) {
+      grid-template: auto / 100%;
+      row-gap: 12px;
     }
-  }
-  &__thumbnails {
-    min-width: 102px;
-    max-height: 477px;
-    @media (max-width: 576px) {
-      min-height: 102px;
-      max-width: 477px;
+    &-thumbs {
+      width: 100%;
+      height: 100%;
+      @media (max-width: 768px) {
+        order: 2;
+      }
     }
-    .swiper-slide {
-      cursor: pointer;
+    &-thumb {
+      border: 1px solid $blue-400;
+      border-radius: 8px;
+      width: 102px;
+      height: 107px;
+      overflow: hidden;
+      @media (max-width: 768px) {
+        width: 72px;
+        height: 75px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
-    .swiper-slide-thumb-active {
-      cursor: auto;
+    &-main {
+      width: 100%;
+      height: 100%;
     }
-  }
-  &__thumbnail {
-    border: 1px solid $blue-400;
-    border-radius: 8px;
-    width: 102px;
-    height: 107px;
-    object-fit: contain;
-  }
-  &__images {
-    min-width: 456px;
-  }
-  &__image {
-    border: 1px solid $blue-400;
-    border-radius: 20px;
-    width: 456px;
-    height: 477px;
-    object-fit: cover;
+    &-image {
+      border: 1px solid $blue-400;
+      border-radius: 20px;
+      width: 456px;
+      height: 477px;
+      overflow: hidden;
+      @media (max-width: 768px) {
+        width: 336px;
+        height: 351px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
   &__description {
     padding: 0px 16px;
+    @media (max-width: 1400px) {
+      order: 3;
+      grid-column: 1 / 3;
+    }
+    @media (max-width: 992px) {
+      order: unset;
+      grid-column: auto;
+    }
   }
   &__title {
     font-weight: 500;

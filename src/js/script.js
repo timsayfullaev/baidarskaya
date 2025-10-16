@@ -1,13 +1,7 @@
 import "modern-normalize";
 
 import Swiper from "swiper";
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  Thumbs,
-  EffectFade,
-} from "swiper/modules";
+import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
 
 import MicroModal from "micromodal";
 
@@ -80,21 +74,21 @@ try {
 } catch (error) {}
 
 try {
-  const thumbsSwiper = new Swiper(".product__thumbnails", {
-    spaceBetween: 12,
+  const thumbsSwiper = new Swiper(".product__gallery-thumbs", {
+    spaceBetween: 16,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
       768: {
+        spaceBetween: 12,
         direction: "vertical",
       },
     },
   });
-  const swiper = new Swiper(".product__slider", {
-    modules: [Thumbs, EffectFade],
+  const swiper = new Swiper(".product__gallery-main", {
+    modules: [Thumbs],
     spaceBetween: 12,
-    // effect: "fade",
     thumbs: {
       swiper: thumbsSwiper,
     },
