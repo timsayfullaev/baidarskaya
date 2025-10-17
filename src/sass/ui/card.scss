@@ -92,6 +92,12 @@
       max-height: 312px;
     }
   }
+  &_popup {
+    @media (max-width: 768px) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
   &__wrapper {
     position: relative;
     display: flex;
